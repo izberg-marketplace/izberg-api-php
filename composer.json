@@ -1,0 +1,7 @@
+{
+    "require-dev": {
+        "raveren/kint": "1.0.x-dev",
+        "php-vcr/php-vcr": "dev-master",
+        "php-vcr/phpunit-testlistener-vcr": "*"
+    }
+}

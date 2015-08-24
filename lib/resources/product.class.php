@@ -8,7 +8,7 @@ class Product extends Resource
 	{
 		if ($id === null && $this->id)
 			$id = $this->id;
-		return parent::$Iceberg->get("review", $params = array("product"=>$id));
+		return parent::$Izberg->get("review", $params = array("product"=>$id));
 	}
 }
 

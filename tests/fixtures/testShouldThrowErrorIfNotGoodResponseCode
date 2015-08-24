@@ -1,0 +1,30 @@
+[{
+    "request": {
+        "method": "GET",
+        "url": "https:\/\/api.sandbox.iceberg.technology\/v1\/user\/sso\/?email=myemail%40yahoo.fr&first_name=my_firstname&last_name=my_lastname&message_auth=ddd5d3d42865e8c39a70f9d105837b6e0c175904&application=lolote&timestamp=1439912480",
+        "headers": {
+            "Host": "api.sandbox.iceberg.technology",
+            "Accept": "application\/json",
+            "Authorization": "ddd5d3d42865e8c39a70f9d105837b6e0c175904"
+        }
+    },
+    "response": {
+        "status": {
+            "http_version": "1.1",
+            "code": "400",
+            "message": "BAD REQUEST"
+        },
+        "headers": {
+            "Access-Control-Allow-Origin": "*",
+            "Content-Language": "fr",
+            "Content-Type": "application\/json",
+            "Date": "Wed, 19 Aug 2015 13:30:37 GMT",
+            "Server": "nginx\/1.6.2",
+            "Vary": "Accept-Language, Cookie, Host",
+            "X-Release-Version": "20150819T120846",
+            "Content-Length": "39",
+            "Connection": "keep-alive"
+        },
+        "body": "{\"errors\": [\"message_auth is invalid\"]}"
+    }
+}]

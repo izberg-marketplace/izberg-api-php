@@ -1,15 +1,15 @@
-#Iceberg-API-PHP
+#Izberg-API-PHP
 
-[![Build Status](https://travis-ci.org/Iceberg-Marketplace/iceberg-api-php.svg?branch=master)](https://travis-ci.org/Iceberg-Marketplace/iceberg-api-php)
+[![Build Status](https://travis-ci.org/Izberg-Marketplace/izberg-api-php.svg?branch=master)](https://travis-ci.org/Izberg-Marketplace/izberg-api-php)
 ## About
 
-PHP Wrapper around the Iceberg API
+PHP Wrapper around the Izberg API
 
 ## Get started
 
 
-[Create an account](http://account.iceberg-marketplace.com) on Iceberg-Marketplace.
-[Create an application](http://dashboard.iceberg-marketplace.com) to be able to use this api.
+[Create an account](http://account.izberg-marketplace.com) on Izberg-Marketplace.
+[Create an application](http://dashboard.izberg-marketplace.com) to be able to use this api.
 
 
 ### Initialize the class
@@ -20,9 +20,9 @@ You can use your access token or our Single Sign On system to identify:
 
 ```php
 <?php
-    require_once 'iceberg.php';
+    require_once 'izberg.php';
 
-    $iceberg = new Iceberg(array(
+    $izberg = new Izberg(array(
       'appNamespace' => 'YOUR_APP_NAMESPACE',
       'accessToken'  => 'YOUR_ACCESSTOKEN',
       'username'   	 => 'YOUR_USERNAME',
@@ -37,15 +37,15 @@ You can use your access token or our Single Sign On system to identify:
 
 ```php
 <?php
-    require_once 'iceberg.php';
+    require_once 'izberg.php';
 
-    $iceberg = new Iceberg(array(
+    $izberg = new Izberg(array(
       'appNamespace' => 'YOUR_APP_NAMESPACE',
       'apiKey'       => 'YOUR_APP_KEY',
       'apiSecret'    => 'YOUR_APP_SECRET'
     ));
 
-    $iceberg->sso(array(
+    $izberg->sso(array(
       "email"     => "YOUR_EMAIL",
       "firstName" => "YOUR_ACCOUNT_FIRST_NAME",
       "lastName"  => "YOUR_ACCOUNT_LAST_NAME"
@@ -56,13 +56,13 @@ You can use your access token or our Single Sign On system to identify:
 
 #### Sandbox
 
-To use our sandbox environment, just pass the param `sandbox` in options when you create your iceberg object :
+To use our sandbox environment, just pass the param `sandbox` in options when you create your izberg object :
 
 ```php
 <?php
-    require_once 'iceberg.php';
+    require_once 'izberg.php';
 
-    $iceberg = new Iceberg(array(
+    $izberg = new Izberg(array(
       'appNamespace' => 'YOUR_APP_NAMESPACE',
       'sandbox'      => true,
     ));
@@ -79,7 +79,7 @@ By default we authenticate the admin user with informations specified on initial
 ```php
 <?php
 
-  $iceberg->setUser(array(
+  $izberg->setUser(array(
     "email"      => "myemail@yahoo.fr",
     "first_name" => "seb",
     "last_name"  => "fie"
@@ -94,7 +94,7 @@ This is useful when you want to link your api calls to a user, you will need it 
 
 Basically, all ressources are handled the same way, using the 5 same generic methods
 
- * You have access to the following resources directly through the main **Iceberg** object:
+ * You have access to the following resources directly through the main **Izberg** object:
      * Address
      * Brand
      * Cart
@@ -131,7 +131,7 @@ For exemple, the following will return the list of all the merchants on your mar
 
 ```php
 
-$merchant_list = $Iceberg->get_list("merchant");
+$merchant_list = $Izberg->get_list("merchant");
 
 ```
 
@@ -148,7 +148,7 @@ For exemple, the following will return the cart object of id '963'
 
 ```php
 
-$my_cart = $Iceberg->get("cart", 963);
+$my_cart = $Izberg->get("cart", 963);
 ```
 
 ####Create
@@ -166,7 +166,7 @@ The following example will create a new address
 
 ```php
 
-$my_adress = $Iceberg->create("address", array(
+$my_adress = $Izberg->create("address", array(
 						"address" => "ADDRESS LINE 1",
 						"address2" => "ADDRESS LINE 2",
 						"city" => "CITY NAME",
@@ -202,7 +202,7 @@ The following example will update an existing merchant
 
 ```php
 
-$my_merchant = $Iceberg->update("merchant", 15, array("description" => "An updated merchant"));
+$my_merchant = $Izberg->update("merchant", 15, array("description" => "An updated merchant"));
 ```
 
 ###Resources specific methods
@@ -215,7 +215,7 @@ Save the current object
 
 ```php
 
-$merchant = $Iceberg->get("merchant", 15);
+$merchant = $Izberg->get("merchant", 15);
 
 $merchant->description = "An Updated Merchant";
 
@@ -229,22 +229,22 @@ Deletes an element from a specific ressource
 
 ```php
 
-	$address = $iceberg->get("address", 963)
+	$address = $izberg->get("address", 963)
 	$address->delete();
-  
+
 ```
 
 ## Order Process
 
 ### Simple Order
 
-Creating an order on Iceberg is really easy, the only thing you need is the Item ID, and your customer's informations.
+Creating an order on Izberg is really easy, the only thing you need is the Item ID, and your customer's informations.
 
 ```php
 
 <?php
 
-	require_once "iceberg.php";
+	require_once "izberg.php";
 
 	$valid_array = array(
 			'appNamespace' => 'YOUR_APP_NAMESPACE',
@@ -254,9 +254,9 @@ Creating an order on Iceberg is really easy, the only thing you need is the Item
 			'apiSecret'    => 'YOUR_APP_SECRET'
 			)
 
-	$IcebergInstance = new Iceberg($valid_array);
+	$IzbergInstance = new Izberg($valid_array);
 
-	$IcebergInstance->setUser(array(
+	$IzbergInstance->setUser(array(
 				"email" => "EMAIL_ADDRESS",
 				"first_name" => "FIRST_NAME",
 				"last_name" => "LAST_NAME"
@@ -271,7 +271,7 @@ Now that we have set the User informations, we can add the offer to the cart.
 	$id_offer = "MY OFFER ID";
 	$quantity = "MY OFFER QUANTITY";
 
-	$my_cart = IcebergInstance->get('cart');
+	$my_cart = IzbergInstance->get('cart');
 	$my_cart->addItem(array(
 		'offer_id' => $id_offer,
 		'quantity' => (int)$quantity,
@@ -284,13 +284,13 @@ You have to use Cart::addItem() for each different offer you want to add to your
 We need the country_id in in order to set the customer's address (Default value is "FR").
 
 ```php
-	$country = $IcebergInstance->get('country');
+	$country = $IzbergInstance->get('country');
 ```
 Now we can set the Shipping and Billing addresses.
 
 ```php
 
-	$address = $IcebergInstance->create('address', array(
+	$address = $IzbergInstance->create('address', array(
         "address" => "ADDRESS LINE 1",
         "address2" => "ADDRESS LINE 2",
         "city" => "CITY NAME"
@@ -336,7 +336,7 @@ Now that both addresses are set, we can place the order.
         'url' => "http://create.com",
         'event' => 'merchant_order_confirmed',
     );
-    $hook = $iceberg->create("webhook", $params);
+    $hook = $izberg->create("webhook", $params);
 
 ```
 
@@ -345,7 +345,7 @@ Now that both addresses are set, we can place the order.
 ```php
 
 	$webhook_id = 1046;
-	$hook = $iceberg->get("webhook", $webhook_id);
+	$hook = $izberg->get("webhook", $webhook_id);
 
     $hook->url = "http://update.com";
     $hook = $hook->save();
@@ -355,5 +355,5 @@ Now that both addresses are set, we can place the order.
 ### Run tests
 
 - Install php unit : http://phpunit.de/getting-started.html
-- cd /to/the/iceberg/php/library/folder
-- run 'USERNAME1=sebfie TOKEN1=156d219e38f84953c159a857738119bc0c35de96 phpunit --debug tests/IcebergTest.php'
+- cd /to/the/izberg/php/library/folder
+- run 'USERNAME1=sebfie TOKEN1=156d219e38f84953c159a857738119bc0c35de96 phpunit --debug tests/IzbergTest.php'

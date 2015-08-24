@@ -1,0 +1,33 @@
+[{
+    "request": {
+        "method": "GET",
+        "url": "https:\/\/api.sandbox.iceberg.technology\/v1\/country\/?code=FR",
+        "headers": {
+            "Host": "api.sandbox.iceberg.technology",
+            "Content-Type": "application\/json; charset=UTF-8",
+            "Accept": "application\/json",
+            "Authorization": "IcebergAccessToken sebfie:156d219e38f84953c159a857738119bc0c35de96"
+        }
+    },
+    "response": {
+        "status": {
+            "http_version": "1.1",
+            "code": "200",
+            "message": "OK"
+        },
+        "headers": {
+            "Access-Control-Allow-Headers": "Content-Type, Authorization, X-CSRFToken, X-Requested-With, Accept",
+            "Access-Control-Allow-Origin": "*",
+            "Cache-Control": "no-cache",
+            "Content-Language": "fr",
+            "Content-Type": "application\/json",
+            "Date": "Wed, 19 Aug 2015 14:34:14 GMT",
+            "Server": "nginx\/1.6.2",
+            "Vary": "Accept, Accept-Language, Cookie, Accept-Encoding, Host",
+            "X-Release-Version": "20150819T120846",
+            "Content-Length": "353",
+            "Connection": "keep-alive"
+        },
+        "body": "{\"meta\": {\"limit\": 100, \"next\": null, \"offset\": 0, \"previous\": null, \"total_count\": 1}, \"objects\": [{\"code\": \"FR\", \"continent\": null, \"from_list\": true, \"id\": 72, \"languages\": [], \"lat\": null, \"lng\": null, \"name\": \"France\", \"phone_prefix\": null, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/country\/72\/\", \"sort_order\": 10, \"weight\": 200}]}"
+    }
+}]

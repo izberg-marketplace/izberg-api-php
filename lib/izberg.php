@@ -1,9 +1,9 @@
 <?php
 
 /**
- * Iceberg API class
+ * Izberg API class
  * API Documentation: http://developers.modizy.com/documentation/
- * Class Documentation: https://github.com/Modizy/Iceberg-API-PHP
+ * Class Documentation: https://github.com/Modizy/Izberg-API-PHP
  *
  * @author Sebastien FIELOUX
  * @since 30.10.2011
@@ -14,9 +14,9 @@
 
 require_once __DIR__."/../HtmlToText/HtmlToText.php";
 require_once __DIR__."/resources/loader.php";
-require_once __DIR__."/exceptions.php";
 
-class Iceberg
+
+class Izberg
 {
 
 	const LOGS = true;
@@ -48,9 +48,9 @@ class Iceberg
 
 
 	/**
-	* The singleton of Iceberg instance
+	* The singleton of Izberg instance
 	*
-	* @var Iceberg
+	* @var Izberg
 	*/
 	protected static $_singleton;
 
@@ -61,39 +61,39 @@ class Iceberg
 	protected static $_api_url;
 
 	/**
-	* The iceberg application namespace
+	* The izberg application namespace
 	*
 	* @var string
 	*/
 	private $_appnamespace;
 
 	/**
-	* The iceberg api secret
+	* The izberg api secret
 	*
 	* @var string
 	*/
 	private $_apisecret;
 
 	/**
-	* The iceberg application api key
+	* The izberg application api key
 	*
 	* @var string
 	*/
 	private $_apikey;
 
 	/**
-	* The iceberg application access_token
+	* The izberg application access_token
 	*
 	* @var string
 	*/
 	private $_access_token;
 
 	/**
-	* The iceberg api key
+	* The izberg api key
 	*
 	* @var string
 	*/
-	private $_iceberg_apikey;
+	private $_izberg_apikey;
 
 	/**
 	* The user email
@@ -267,12 +267,12 @@ class Iceberg
 	}
 
 	/**
-	* Iceberg API key Getter
+	* Izberg API key Getter
 	*
 	* @return String
 	*/
-	public function getIcebergApiKey() {
-		return $this->_iceberg_apikey;
+	public function getIzbergApiKey() {
+		return $this->_izberg_apikey;
 	}
 
 	/**
@@ -294,7 +294,7 @@ class Iceberg
 		$this->setTimestamp(time());
 		$to_compose = array($email, $first_name, $last_name, $this->getTimestamp());
 		if (is_null($this->getApiSecret())) {
-			throw new GenericException("To use SSO you have to set the api_secret");
+			throw new exception("To use SSO you have to set the api_secret");
 		}
 		$message_auth = hash_hmac('sha1', implode(";", $to_compose), $this->getApiSecret());
 		return $message_auth;
@@ -384,7 +384,7 @@ class Iceberg
 	{
 		$this->_single_sign_on_response = $this->_getSingleSignOnResponse($params);
 		$this->current_user = $this->getUser();
-		$this->setIcebergApiKey($this->_single_sign_on_response->api_key);
+		$this->setIzbergApiKey($this->_single_sign_on_response->api_key);
 		$this->setAccessToken($this->_single_sign_on_response->access_token);
 		$this->setUsername($this->_single_sign_on_response->username);
 		if ($this->_single_sign_on_response->username != "Anonymous") {
@@ -441,14 +441,14 @@ class Iceberg
 	}
 
 	/**
-	* Iceberg API key Setter
+	* Izberg API key Setter
 	*
 	* @param string $api_key
 	* @return String
 	*/
-	public function setIcebergApiKey($api_key)
+	public function setIzbergApiKey($api_key)
 	{
-		$this->_iceberg_apikey = $api_key;
+		$this->_izberg_apikey = $api_key;
 	}
 
 	/**
@@ -477,16 +477,14 @@ class Iceberg
 	/**
 	* Default constructor
 	*
-	* @param array|string $config          Iceberg configuration data
+	* @param array|string $config          Izberg configuration data
 	* @return void
 	*/
 	public function __construct($config)
 	{
 		$this->_debug = false;
-
 		if (true === is_array($config)) {
 			self::$_api_url = (isset($config['sandbox']) && $config['sandbox'] === true) ? self::SANDBOX_API_URL : self::PRODUCTION_API_URL;
-			self::$_api_url = (isset($config['apiUrl']))? $config['apiUrl']: self::$_api_url;
 
 			if (isset($config['accessToken'])) {
 				$this->setAccessToken($config['accessToken']);
@@ -506,10 +504,10 @@ class Iceberg
 
 			// We save this instance as singleton
 			self::setInstance($this);
-			Ice\Resource::setIceberg($this);
+			Ice\Resource::setIzberg($this);
 
 		} else {
-			throw new GenericException("Error: __construct() - Configuration data is missing.");
+			throw new Exception("Error: __construct() - Configuration data is missing.");
 		}
 	}
 
@@ -525,7 +523,7 @@ class Iceberg
     $this->setFirstName( isset($config['firstName']) ? $config['firstName'] : "");
     $this->setLastName( isset($config['lastName']) ? $config['lastName'] : "");
 
-		// We get the iceberg api key using the Single Sign On API
+		// We get the izberg api key using the Single Sign On API
     return $this->setUser(array(
       "email" => isset($config['email']) ? $config['email'] : "",
       "first_name" => isset($config['firstName']) ? $config['firstName'] : "",
@@ -537,27 +535,27 @@ class Iceberg
 	/**
 	* Static function to get the last validated Instance
 	*
-	* @return Iceberg
+	* @return Izberg
 	*/
 	public static function getInstance()
 	{
 		if (self::$_singleton) {
 			return self::$_singleton;
 		} else {
-			throw new GenericException("You should create a first validated Iceberg instance");
+			throw new Exception("You should create a first validated Izberg instance");
 		}
 	}
 
 	/**
 	* Set the default instance to a specified instance.
 	*
-	* @param Iceberg $iceberg An object instance of type Iceberg,
+	* @param Izberg $izberg An object instance of type Izberg,
 	*   or a subclass.
 	* @return void
 	*/
-	public static function setInstance(Iceberg $iceberg)
+	public static function setInstance(Izberg $izberg)
 	{
-		self::$_singleton = $iceberg;
+		self::$_singleton = $izberg;
 	}
 
 
@@ -570,40 +568,15 @@ class Iceberg
 	**/
 	public function log($message, $level="error", $path = null)
 	{
-		date_default_timezone_set("Europe/Paris");
+		date_default_timezone_set("Europe/berlin");
 		if (false === self::LOGS)
 			return ;
 		if (false === is_dir($path))
-			$path = __DIR__."/../log/";
+			$path = null;
 		else if (substr($path, -1) != '/')
 			$path .= '/';
-
-		file_put_contents($path."log-".$level."-".date("m-d").".txt", date("H:i:s | ").$message."\n", FILE_APPEND);
+		file_put_contents($path."log-".$level."-".date("m-d").".txt", date("H:i:s | ")." : ".$message."\n", FILE_APPEND);
 	}
-
-	/**
-	 * Get the inline user token
-	 * @return String
-	 */
-	public function getInlineUserToken()
-	{
-		if ($this->useSso()) {
-			if (strtolower($this->_single_sign_on_response->username) == 'anonymous'){
-				$api_key = $this->_single_sign_on_response->api_key;
-				if (!is_null($this->getApiKey()))
-					$api_key = $this->getApiKey();
-				$h = $this->_single_sign_on_response->username . ":" . $this->getAppNamespace() .":".$api_key;
-			}
-			else
-				$h = $this->_single_sign_on_response->username . ":" .$this->_single_sign_on_response->api_key;
-			$headers = 'IcebergAccessToken '. $h;
-		} else {
-			$headers = 'IcebergAccessToken '. $this->getUserName() . ":" . $this->getAccessToken();
-		}
-
-		return $headers;
-	}
-
 	/**
 	* The call operator
 	*
@@ -628,16 +601,15 @@ class Iceberg
 		$apiCall = self::$_api_url . $path . (('GET' === $method) ? $paramString : null);
 
 		if (!$this->_anonymous) {
-       		$h = 'Authorization: IcebergAccessToken '. $this->getUsername() . ":" . $this->getAccessToken();
-	    } else {
-	      $h = 'Authorization: IcebergAccessToken anonymous:'. $this->getAppNamespace() . ":" . $this->getAccessToken();
-	    }
-
-	    $headers = array(
-	      $content_type,
-	      $accept_type,
-	      $h
-	    );
+       $h = 'Authorization: IzbergAccessToken '. $this->getUsername() . ":" . $this->getAccessToken();
+    } else {
+      $h = 'Authorization: IzbergAccessToken anonymous:'. $this->getAppNamespace() . ":" . $this->getAccessToken();
+    }
+    $headers = array(
+      $content_type,
+      $accept_type,
+      $h
+    );
 
 		$ch = curl_init();
 
@@ -647,17 +619,21 @@ class Iceberg
 		curl_setopt($ch, CURLOPT_URL, $apiCall);
 		curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 		curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
+		curl_setopt($ch, CURLOPT_HEADER, 0);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 		curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);
 		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 
-		// curl_setopt($ch, CURLOPT_PROXY, "127.0.0.1");
-		// curl_setopt($ch, CURLOPT_PROXYPORT, 8888);
+		curl_setopt($ch, CURLOPT_PROXY, "127.0.0.1");
+		curl_setopt($ch, CURLOPT_PROXYPORT, 8888);
 
 		if ('POST' === $method)
 		{
 			curl_setopt($ch, CURLOPT_POST, count($params));
-			curl_setopt($ch, CURLOPT_POSTFIELDS, ltrim(ltrim($paramString, '&'), '?'));
+			if (ltrim(ltrim($paramString, '&'), '?') != "") {
+				curl_setopt($ch, CURLOPT_POSTFIELDS, ltrim(ltrim($paramString, '&'), '?'));
+			}
+			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
 		} else if ('DELETE' === $method) {
 			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'DELETE');
 		} else if ('PUT' === $method) {
@@ -668,13 +644,8 @@ class Iceberg
 
 		$data = $this->curlExec($ch);
 
-		$this->log($method." | ".$apiCall, "call");
-		if (!is_null($paramString))
-			$this->log("PARAMS | ".ltrim(ltrim($paramString, '&'), '?'), "call", __DIR__."/log");
-		$this->log("DATE | ".$data, "call");
-
 		if (false === $data) {
-			throw new GenericException("Error: Call() - cURL error: " . curl_error($ch));
+			throw new Exception("Error: Call() - cURL error: " . curl_error($ch));
 		}
 		$http_code = (int) curl_getinfo($ch, CURLINFO_HTTP_CODE);
     if ($http_code >= 400) {
@@ -715,53 +686,29 @@ class Iceberg
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, $apiCall);
 		curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-		curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
-		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+		curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 300);
+		curl_setopt($ch, CURLOPT_HEADER, 0);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 
-		// curl_setopt($ch, CURLOPT_PROXY, "127.0.0.1");
-		// curl_setopt($ch, CURLOPT_PROXYPORT, 8888);
+		curl_setopt($ch, CURLOPT_PROXY, "127.0.0.1");
+		curl_setopt($ch, CURLOPT_PROXYPORT, 8888);
 
 		$jsonData = $this->curlExec($ch);
+		// list($headers, $jsonData) = explode("\r\n\r\n", $jsonData, 2);
+
 		$httpcode = $this->curlGetInfo($ch, CURLINFO_HTTP_CODE);
 
 		if (false === $jsonData) {
-			throw new GenericException("Error: _getSingleSignOnResponse() - cURL error: " . curl_error($ch));
+			throw new Exception("Error: _getSingleSignOnResponse() - cURL error: " . curl_error($ch));
 		}
 		$http_code = (int) curl_getinfo($ch, CURLINFO_HTTP_CODE);
-    if ($http_code >= 400) {
-      // We raise only on http code > 400
-      throw new exception ("We got an response with code " . $http_code . " and response " . $data . " from url: " .$apiCall );
-    }
-		curl_close($ch);
 
+		curl_close($ch);
 		$jsonResponse = json_decode($jsonData);
 		// We display the error only if the HTTP code is different of 200..300
 		if (preg_match("/2\d{2}/", $httpcode)  == 0) {
-			$message = "Error: from Iceberg API - error: " . print_r($jsonResponse,true);
-			switch ($httpcode){
-				case '400':
-					throw new BadRequestException($message);
-					break;
-				case '401':
-					throw new UnauthorizedException($message);
-					break;
-				case '403':
-					throw new ForbiddenException($message);
-					break;
-				case '404':
-					throw new NotFoundException($message);
-					break;
-				case '405':
-					throw new MethodNotAllowedException($message);
-					break;
-				case '500':
-					throw new InternalErrorException($message);
-					break;
-				default:
-					throw new GenericException($message);
-					break;
-			}
+			throw new Exception("Error: from Izberg API - error: " . $jsonData);
 		}
 		return $jsonResponse;
 	}
@@ -784,13 +731,13 @@ class Iceberg
 	* @returns object
 	*
 	**/
-	public function testIcebergToken()
+	public function testIzbergToken()
 	{
 		try
 		{
 			$result = $this->Call('user/me/');
 		}
-		catch (GenericException $e)
+		catch (Exception $e)
 		{
 			$result = false;
 		}
@@ -834,11 +781,29 @@ class Iceberg
 			$response = $this->Call($endpoint."/".$id."/", 'GET', $params, $accept_type);
 		else
 			$response = $this->Call($endpoint."/", 'GET', $params, $accept_type);
-
 		$object->hydrate($response);
 		return $object;
 	}
 
+
+	/**
+	* Factory method, use it to get response to build resources
+	*
+	* @returns object
+	*
+	**/
+	public function get_list_response($resource, $params = null, $accept_type = "Accept: application/json")
+	{
+		if (strncmp("Ice\\", $resource, 4) != 0)
+			$resource = "Ice\\".ucfirst($resource);
+		$handler = new $resource();
+		// If we override the get_list method
+		if (method_exists($resource, "get_list")) {
+			return $handler->get_list($params, $accept_type);
+		} else {
+			return $this->Call($handler->getName()."/", 'GET', $params, $accept_type);
+		}
+	}
 
 	/**
 	* Factory method, use it to build resources
@@ -849,9 +814,9 @@ class Iceberg
 	public function get_list($resource, $params = null, $accept_type = "Accept: application/json")
 	{
 		if (strncmp("Ice\\", $resource, 4) != 0)
-			$resource = "Ice\\".$resource;
-		$handler = new $resource();
-		$list = $this->Call($handler->getName()."/", 'GET', $params, $accept_type);
+			$resource = "Ice\\".ucfirst($resource);
+
+		$list = $this->get_list_response($resource, $params = null, $accept_type = "Accept: application/json");
 		$object_list = array();
 		foreach ($list->objects as $object)
 		{
@@ -860,6 +825,18 @@ class Iceberg
 			$object_list[] = $obj;
 		}
 		return $object_list;
+	}
+
+	/**
+	* Factory method, use it to build resources
+	*
+	* @returns object
+	*
+	**/
+	public function get_list_meta($resource, $params = null, $accept_type = "Accept: application/json")
+	{
+		$result = $this->get_list_response($resource, $params = null, $accept_type = "Accept: application/json");
+		return $result->meta;
 	}
 
 	/**
@@ -889,7 +866,7 @@ class Iceberg
 	public function update($resource = null, $id = null, $params = null, $accept_type = "Content-Type: application/json")
 	{
 		if (!$id || !$resource)
-			throw new GenericException(__METHOD__." needs a valid ID and a valid Resource Name");
+			throw new Exception(__METHOD__." needs a valid ID and a valid Resource Name");
 		if (strncmp("Ice\\", $resource, 4) != 0)
 			$resource = "Ice\\".$resource;
 		$obj = new $resource();

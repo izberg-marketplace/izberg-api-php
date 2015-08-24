@@ -1,0 +1,97 @@
+[{
+    "request": {
+        "method": "GET",
+        "url": "https:\/\/api.sandbox.iceberg.technology\/v1\/country\/?code=FR",
+        "headers": {
+            "Host": "api.sandbox.iceberg.technology",
+            "Content-Type": "application\/json; charset=UTF-8",
+            "Accept": "application\/json",
+            "Authorization": "IcebergAccessToken sebfie:156d219e38f84953c159a857738119bc0c35de96"
+        }
+    },
+    "response": {
+        "status": {
+            "http_version": "1.1",
+            "code": "200",
+            "message": "OK"
+        },
+        "headers": {
+            "Access-Control-Allow-Headers": "Content-Type, Authorization, X-CSRFToken, X-Requested-With, Accept",
+            "Access-Control-Allow-Origin": "*",
+            "Cache-Control": "no-cache",
+            "Content-Language": "fr",
+            "Content-Type": "application\/json",
+            "Date": "Wed, 19 Aug 2015 14:34:56 GMT",
+            "Server": "nginx\/1.6.2",
+            "Vary": "Accept, Accept-Language, Cookie, Accept-Encoding, Host",
+            "X-Release-Version": "20150819T120846",
+            "Content-Length": "353",
+            "Connection": "keep-alive"
+        },
+        "body": "{\"meta\": {\"limit\": 100, \"next\": null, \"offset\": 0, \"previous\": null, \"total_count\": 1}, \"objects\": [{\"code\": \"FR\", \"continent\": null, \"from_list\": true, \"id\": 72, \"languages\": [], \"lat\": null, \"lng\": null, \"name\": \"France\", \"phone_prefix\": null, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/country\/72\/\", \"sort_order\": 10, \"weight\": 200}]}"
+    }
+},{
+    "request": {
+        "method": "POST",
+        "url": "https:\/\/api.sandbox.iceberg.technology\/v1\/address\/",
+        "headers": {
+            "Host": "api.sandbox.iceberg.technology",
+            "Content-Type": "application\/json",
+            "Authorization": "IcebergAccessToken sebfie:156d219e38f84953c159a857738119bc0c35de96"
+        },
+        "body": "{\"address\":\"Address line 1\",\"address2\":\"Address line 2\",\"city\":\"St remy de provence\",\"company\":\"Sebfie\",\"country\":\"\\\/v1\\\/country\\\/72\\\/\",\"digicode\":null,\"first_name\":\"sebastien\",\"floor\":null,\"last_name\":\"fieloux\",\"name\":\"House\",\"phone\":\"0698674532\",\"state\":null,\"status\":10,\"zipcode\":\"13210\"}"
+    },
+    "response": {
+        "status": {
+            "http_version": "1.1",
+            "code": "201",
+            "message": "CREATED"
+        },
+        "headers": {
+            "Access-Control-Allow-Headers": "Content-Type, Authorization, X-CSRFToken, X-Requested-With, Accept",
+            "Access-Control-Allow-Origin": "*",
+            "Content-Language": "fr",
+            "Content-Type": "application\/json",
+            "Date": "Wed, 19 Aug 2015 14:34:57 GMT",
+            "Location": "https:\/\/api.sandbox.iceberg.technology\/v1\/address\/3452\/",
+            "Server": "nginx\/1.6.2",
+            "Vary": "Accept, Accept-Language, Cookie, Accept-Encoding, Host",
+            "X-Release-Version": "20150819T120846",
+            "Content-Length": "937",
+            "Connection": "keep-alive"
+        },
+        "body": "{\"_default_billing\": false, \"_default_shipping\": false, \"address\": \"Address line 1\", \"address2\": \"Address line 2\", \"application\": {\"id\": 9, \"pk\": 9, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/application\/9\/\"}, \"city\": \"St remy de provence\", \"company\": \"Sebfie\", \"country\": {\"id\": 72, \"name\": \"France\", \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/country\/72\/\", \"type\": \"country\"}, \"default_billing\": false, \"default_shipping\": false, \"digicode\": null, \"evening_phone\": \"\", \"external_id\": null, \"fax\": \"\", \"first_name\": \"sebastien\", \"floor\": null, \"from_list\": false, \"id\": 3452, \"last_name\": \"fieloux\", \"name\": \"House\", \"phone\": \"0698674532\", \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/address\/3452\/\", \"state\": null, \"status\": \"10\", \"status_localized\": \"Adresse active \", \"user\": {\"id\": 14, \"pk\": 14, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/user\/14\/\"}, \"zipcode\": \"13210\"}"
+    }
+},{
+    "request": {
+        "method": "GET",
+        "url": "https:\/\/api.sandbox.iceberg.technology\/v1\/address\/3452\/",
+        "headers": {
+            "Host": "api.sandbox.iceberg.technology",
+            "Content-Type": "application\/json; charset=UTF-8",
+            "Accept": "application\/json",
+            "Authorization": "IcebergAccessToken sebfie:156d219e38f84953c159a857738119bc0c35de96"
+        }
+    },
+    "response": {
+        "status": {
+            "http_version": "1.1",
+            "code": "200",
+            "message": "OK"
+        },
+        "headers": {
+            "Access-Control-Allow-Headers": "Content-Type, Authorization, X-CSRFToken, X-Requested-With, Accept",
+            "Access-Control-Allow-Origin": "*",
+            "Cache-Control": "no-cache",
+            "Content-Language": "fr",
+            "Content-Type": "application\/json",
+            "Date": "Wed, 19 Aug 2015 14:34:58 GMT",
+            "Server": "nginx\/1.6.2",
+            "Vary": "Accept, Accept-Language, Cookie, Accept-Encoding, Host",
+            "X-Release-Version": "20150819T120846",
+            "Content-Length": "862",
+            "Connection": "keep-alive"
+        },
+        "body": "{\"address\": \"Address line 1\", \"address2\": \"Address line 2\", \"application\": {\"id\": 9, \"pk\": 9, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/application\/9\/\"}, \"city\": \"St remy de provence\", \"company\": \"Sebfie\", \"country\": {\"id\": 72, \"name\": \"France\", \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/country\/72\/\", \"type\": \"country\"}, \"default_billing\": false, \"default_shipping\": false, \"digicode\": null, \"external_id\": null, \"first_name\": \"sebastien\", \"floor\": null, \"from_list\": false, \"id\": 3452, \"last_name\": \"fieloux\", \"meta\": {}, \"name\": \"House\", \"phone\": \"0698674532\", \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/address\/3452\/\", \"state\": null, \"status\": \"10\", \"status_localized\": \"Adresse active \", \"user\": {\"id\": 14, \"pk\": 14, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/user\/14\/\"}, \"zipcode\": \"13210\"}"
+    }
+}]

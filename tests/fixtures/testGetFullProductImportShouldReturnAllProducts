@@ -1,0 +1,125 @@
+[{
+    "request": {
+        "method": "GET",
+        "url": "https:\/\/api.sandbox.iceberg.technology\/v1\/merchant\/15\/",
+        "headers": {
+            "Host": "api.sandbox.iceberg.technology",
+            "Content-Type": "application\/json; charset=UTF-8",
+            "Accept": "application\/json",
+            "Authorization": "IcebergAccessToken sebfie:156d219e38f84953c159a857738119bc0c35de96"
+        }
+    },
+    "response": {
+        "status": {
+            "http_version": "1.1",
+            "code": "200",
+            "message": "OK"
+        },
+        "headers": {
+            "Access-Control-Allow-Headers": "Content-Type, Authorization, X-CSRFToken, X-Requested-With, Accept",
+            "Access-Control-Allow-Origin": "*",
+            "Cache-Control": "no-cache",
+            "Content-Language": "fr",
+            "Content-Type": "application\/json",
+            "Date": "Wed, 19 Aug 2015 13:30:39 GMT",
+            "Server": "nginx\/1.6.2",
+            "Vary": "Accept, Accept-Language, Cookie, Accept-Encoding, Host",
+            "X-Release-Version": "20150819T120846",
+            "Content-Length": "2818",
+            "Connection": "keep-alive"
+        },
+        "body": "{\"addresses\": [{\"address\": \"salut c'est cool\", \"address2\": \"\", \"billing_address\": false, \"city\": \"Paris\", \"contact_email\": \"test@yopmail.com\", \"contact_first_name\": \"N\/A\", \"contact_last_name\": \"N\/A\", \"contact_social_reason\": \"1\", \"country\": {\"id\": 72, \"name\": \"France\", \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/country\/72\/\", \"type\": \"country\"}, \"id\": 6, \"language\": \"fr\", \"merchant\": {\"id\": 15, \"pk\": 15, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/merchant\/15\/\", \"type\": \"merchant\"}, \"phone\": \"0610101010\", \"pk\": 6, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/merchant_address\/6\/\", \"return_address\": true, \"state\": \"\", \"zipcode\": \"75000\"}], \"application\": {\"id\": 20, \"name\": \"My Marin Application\", \"namespace\": \"app31964050047\", \"pk\": 20, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/application\/20\/\"}, \"communication_score\": null, \"cover_image\": null, \"created_on\": \"2014-07-16T10:03:15+02:00\", \"currencies\": [], \"default_currency\": \"EUR\", \"description\": \"random description 43\", \"facebook\": null, \"from_list\": false, \"gid\": \"m:15\", \"id\": 15, \"languages\": [], \"logo_image\": null, \"long_description\": \"<p class=\\\"lc\\\" style=\\\"margin-bottom: 0px; font-size: 11px; font-family: Arial, Helvetica, sans; clear: left; float: left; width: 348px; color: rgb(0, 0, 0); line-height: normal; text-align: center;\\\"><p style=\\\"text-align: justify; font-size: 11px; line-height: 14px; margin-bottom: 14px; padding: 0px;\\\">Le&nbsp;<b>Lorem Ipsum<\/b>&nbsp;est simplement du faux texte employ\u00e9 dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les ann\u00e9es 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour r\u00e9aliser un livre sp\u00e9cimen de polices de texte. Il n'a pas fait que survivre cinq si\u00e8cles, mais s'est aussi adapt\u00e9 \u00e0 la bureautique informatique, sans que son contenu n'en soit modifi\u00e9. Il a \u00e9t\u00e9 popularis\u00e9 dans les ann\u00e9es 1960 gr\u00e2ce \u00e0 la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus r\u00e9cemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.<\/p><p><br><\/p><\/p>\", \"meta\": {}, \"name\": \"marin\", \"opening_hours\": null, \"overall_score\": null, \"pinterest\": null, \"prefered_language\": \"fr\", \"prefered_language_localized\": \"French\", \"products_score\": null, \"profile_image\": null, \"reactivity_score\": null, \"region\": \"FR\", \"region_localized\": \"France\", \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/merchant\/15\/\", \"shipping_policy\": 3, \"shipping_score\": null, \"slug\": \"marin\", \"status\": \"10\", \"status_comment\": \"\", \"status_localized\": \"Actif\", \"store_type\": 1, \"store_type_localized\": \"Professionnel\", \"twitter\": null, \"type\": \"m\", \"url\": \"bonjour.com\", \"wrapping_score\": null}"
+    }
+},{
+    "request": {
+        "method": "GET",
+        "url": "https:\/\/api.sandbox.iceberg.technology\/v1\/merchant\/15\/active_products_channel",
+        "headers": {
+            "Host": "api.sandbox.iceberg.technology",
+            "Content-Type": "application\/json; charset=UTF-8",
+            "Accept": "application\/json",
+            "Authorization": "IcebergAccessToken sebfie:156d219e38f84953c159a857738119bc0c35de96"
+        }
+    },
+    "response": {
+        "status": {
+            "http_version": "1.1",
+            "code": "301",
+            "message": "MOVED PERMANENTLY"
+        },
+        "headers": {
+            "Content-Language": "fr",
+            "Content-Type": "text\/html; charset=utf-8",
+            "Date": "Wed, 19 Aug 2015 13:30:39 GMT",
+            "Location": "https:\/\/api.sandbox.iceberg.technology\/v1\/merchant\/15\/active_products_channel\/",
+            "Server": "nginx\/1.6.2",
+            "Vary": "Accept-Language, Host",
+            "X-Release-Version": "20150819T120846",
+            "Content-Length": "0",
+            "Connection": "keep-alive"
+        },
+        "body": "{\"algolia_api_key\": \"56483f28ce728540ec4b85ecd014e0c3\", \"algolia_api_key_expiration_date\": \"2015-08-20T15:13:37+02:00\", \"algolia_application_id\": \"XLQ48VVTWV\", \"algolia_available_slaves\": [{\"attribute\": \"best_offer.price_with_vat\", \"index_name\": \"SAND:pc:active:615:615:marin:price_with_vat\", \"sort\": \"asc\"}, {\"attribute\": \"best_offer.price_with_vat\", \"index_name\": \"SAND:pc:active:615:615:marin:-price_with_vat\", \"sort\": \"desc\"}], \"algolia_index_name\": \"SAND:pc:active:615:615:marin:\", \"application\": {\"id\": 20, \"pk\": 20, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/application\/20\/\"}, \"channel_type\": \"active\", \"created_on\": \"2015-04-22T16:48:35+02:00\", \"currency\": null, \"description\": \"Active products channel of merchant marin\", \"devices\": \"[]\", \"from_list\": false, \"id\": 615, \"ignore_product_id_check\": false, \"inbound_policy\": {\"id\": 1, \"pk\": 1, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/product_channel_propagation_policy\/1\/\"}, \"is_main\": true, \"label\": \"active_products\", \"language\": \"fr\", \"last_full_sync_end\": null, \"last_full_sync_start\": null, \"last_logs\": [], \"last_modified\": \"2015-07-28T17:54:53+02:00\", \"logging_backend_name\": \"db\", \"merchant\": {\"id\": 15, \"pk\": 15, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/merchant\/15\/\"}, \"meta\": {}, \"name\": \"Active products channel of marin\", \"offer_type\": \"product_offers\", \"options\": \"{}\", \"outbound_policy\": {\"id\": 1, \"pk\": 1, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/product_channel_propagation_policy\/1\/\"}, \"product_families\": [], \"propagate_dropped_events\": true, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/product_channel\/615\/\", \"status\": \"synced\", \"storage_backend_name\": \"cache\", \"try_to_delete_on_drop\": true}"
+    }
+}],{
+    "request": {
+        "method": "GET",
+        "url": "https:\/\/api.sandbox.iceberg.technology\/v1\/product_channel\/615\/viewer\/?format=xml",
+        "headers": {
+            "Host": "api.sandbox.iceberg.technology",
+            "Content-Type": "application\/json; charset=UTF-8",
+            "Accept": "application\/xml",
+            "Authorization": "IcebergAccessToken sebfie:156d219e38f84953c159a857738119bc0c35de96"
+        }
+    },
+    "response": {
+        "status": {
+            "http_version": "1.1",
+            "code": "200",
+            "message": "OK"
+        },
+        "headers": {
+            "Cache-Control": "no-cache",
+            "Content-Language": "fr",
+            "Content-Type": "application\/xml",
+            "Date": "Wed, 19 Aug 2015 13:31:27 GMT",
+            "Server": "nginx\/1.6.2",
+            "Vary": "Accept, Accept-Language, Cookie, Accept-Encoding, Host",
+            "X-Release-Version": "20150819T120846",
+            "Content-Length": "57",
+            "Connection": "keep-alive"
+        },
+        "body": "<?xml version='1.0' encoding='utf-8'?><catalog><\/catalog>"
+    }
+},{
+    "request": {
+        "method": "GET",
+        "url": "https:\/\/api.sandbox.iceberg.technology\/v1\/merchant\/15\/active_products_channel\/",
+        "headers": {
+            "Host": "api.sandbox.iceberg.technology",
+            "Content-Type": "application\/json; charset=UTF-8",
+            "Accept": "application\/json",
+            "Authorization": "IcebergAccessToken sebfie:156d219e38f84953c159a857738119bc0c35de96"
+        }
+    },
+    "response": {
+        "status": {
+            "http_version": "1.1",
+            "code": "200",
+            "message": "OK"
+        },
+        "headers": {
+            "Access-Control-Allow-Headers": "Content-Type, Authorization, X-CSRFToken, X-Requested-With, Accept",
+            "Access-Control-Allow-Origin": "*",
+            "Cache-Control": "no-cache",
+            "Content-Language": "fr",
+            "Content-Type": "application\/json",
+            "Date": "Wed, 19 Aug 2015 15:42:18 GMT",
+            "Server": "nginx\/1.6.2",
+            "Vary": "Accept, Accept-Language, Cookie, Accept-Encoding, Host",
+            "X-Release-Version": "20150819T120846",
+            "transfer-encoding": "chunked",
+            "Connection": "keep-alive"
+        },
+        "body": "{\"algolia_api_key\": \"56483f28ce728540ec4b85ecd014e0c3\", \"algolia_api_key_expiration_date\": \"2015-08-20T15:13:37+02:00\", \"algolia_application_id\": \"XLQ48VVTWV\", \"algolia_available_slaves\": [{\"attribute\": \"best_offer.price_with_vat\", \"index_name\": \"SAND:pc:active:615:615:marin:price_with_vat\", \"sort\": \"asc\"}, {\"attribute\": \"best_offer.price_with_vat\", \"index_name\": \"SAND:pc:active:615:615:marin:-price_with_vat\", \"sort\": \"desc\"}], \"algolia_index_name\": \"SAND:pc:active:615:615:marin:\", \"application\": {\"id\": 20, \"pk\": 20, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/application\/20\/\"}, \"channel_type\": \"active\", \"created_on\": \"2015-04-22T16:48:35+02:00\", \"currency\": null, \"description\": \"Active products channel of merchant marin\", \"devices\": \"[]\", \"from_list\": false, \"id\": 615, \"ignore_product_id_check\": false, \"inbound_policy\": {\"id\": 1, \"pk\": 1, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/product_channel_propagation_policy\/1\/\"}, \"is_main\": true, \"label\": \"active_products\", \"language\": \"fr\", \"last_full_sync_end\": null, \"last_full_sync_start\": null, \"last_logs\": [], \"last_modified\": \"2015-07-28T17:54:53+02:00\", \"logging_backend_name\": \"db\", \"merchant\": {\"id\": 15, \"pk\": 15, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/merchant\/15\/\"}, \"meta\": {}, \"name\": \"Active products channel of marin\", \"offer_type\": \"product_offers\", \"options\": \"{}\", \"outbound_policy\": {\"id\": 1, \"pk\": 1, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/product_channel_propagation_policy\/1\/\"}, \"product_families\": [], \"propagate_dropped_events\": true, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/product_channel\/615\/\", \"status\": \"synced\", \"storage_backend_name\": \"cache\", \"try_to_delete_on_drop\": true}"
+    }
+}]

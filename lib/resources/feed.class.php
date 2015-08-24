@@ -36,7 +36,7 @@ class Feed extends Resource
 			'source_type'=>$source_type,
 			'feed_url'=>$feed_url
 		);
-		return parent::$Iceberg->Call($this->getName()."/", "POST", $data, "Content-Type: application/json");
+		return parent::$Izberg->Call($this->getName()."/", "POST", $data, "Content-Type: application/json");
 	}
 
 }

@@ -13,6 +13,12 @@ php:
     - 5.4
     - 5.3
 script:
-    - phpunit tests/IcebergTest.php
+    - phpunit tests/IzbergTest.php
+
+before_script:
+    - composer install
 env :
     secure: "A5m0srxdsu4JJf5apz4Ima+ezDdw2WRgXHz6qMPc6R7sUj6nwVMY6Ipcesuf8T8hgK+UfEMsUgcti53Q7/ipTaMgHv3tjvdC61fZk36YTu/unnfN7id9gg8QA93By0/F0s5wLSuYHXVxMr2m/xRrg6mZtLSwfSSsY75B9iahSsw="
+
+notifications:
+  slack: izberg:vPgu4VAwP0aPv9ODXFT4YGs2

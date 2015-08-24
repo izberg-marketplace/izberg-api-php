@@ -13,7 +13,7 @@ class Cart extends Resource
     */
     public function getItems($params = null, $accept_type = "Accept: application/json")
     {
-        $list = self::$Iceberg->Call("cart/".$this->id."/items/", 'GET', $params, $accept_type);
+        $list = self::$Izberg->Call("cart/".$this->id."/items/", 'GET', $params, $accept_type);
         $object_list = array();
         if (!isset($list->objects))
             return null;
@@ -42,7 +42,7 @@ class Cart extends Resource
         //   quantity: Integer
         //   gift: Boolean
         //   bundled: Boolean
-        $response = self::$Iceberg->Call("cart/".($this->id ? $this->id : "none")."/items/", 'POST', $params, $accept_type);
+        $response = self::$Izberg->Call("cart/".($this->id ? $this->id : "none")."/items/", 'POST', $params, $accept_type);
         $object = new CartItem();
         $object->hydrate($response);
         $this->items[] = $object;
@@ -63,7 +63,7 @@ class Cart extends Resource
         //   gift: Boolean
         //   bundled: Boolean
         $object = new CartItem();
-        $response = parent::$Iceberg->Call($object->getName()."/".$id."/", "PUT", $params, $accept_type);
+        $response = parent::$Izberg->Call($object->getName()."/".$id."/", "PUT", $params, $accept_type);
         $object->hydrate($response);
         return $object;
     }
@@ -77,7 +77,7 @@ class Cart extends Resource
     {
         $params["shipping_address"] = "/v1/address/".$id."/";
         $this->shipping_address = "/v1/address/".$id."/";
-        return parent::$Iceberg->update('Cart', $this->id, $params);
+        return parent::$Izberg->update('Cart', $this->id, $params);
     }
 
 
@@ -90,13 +90,13 @@ class Cart extends Resource
     {
         $params["billing_address"] = "/v1/address/".$id."/";
         $this->billing_address = "/v1/address/".$id."/";
-        return parent::$Iceberg->update('Cart', $this->id, $params);
+        return parent::$Izberg->update('Cart', $this->id, $params);
     }
 
     public function createOrder($params = null, $accept_type = 'Content-Type: application/json')
     {
         $object = new Order();
-        $response = parent::$Iceberg->Call("cart/" . $this->id . "/createOrder/", 'POST', $params, $accept_type);
+        $response = parent::$Izberg->Call("cart/" . $this->id . "/createOrder/", 'POST', $params, $accept_type);
         $object->hydrate($response);
         return $object;
     }
@@ -110,7 +110,7 @@ class Cart extends Resource
             'offer_id'=> $product_offer_id,
             'quantity'=> $quantity
         );
-        return parent::$Iceberg->Call($this->getName()."/items/", "POST", $params);
+        return parent::$Izberg->Call($this->getName()."/items/", "POST", $params);
     }
 
 }

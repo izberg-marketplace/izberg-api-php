@@ -1,0 +1,96 @@
+[{
+    "request": {
+        "method": "GET",
+        "url": "https:\/\/api.sandbox.iceberg.technology\/v1\/cart\/mine\/",
+        "headers": {
+            "Host": "api.sandbox.iceberg.technology",
+            "Content-Type": "application\/json; charset=UTF-8",
+            "Accept": "application\/json",
+            "Authorization": "IcebergAccessToken sebfie:156d219e38f84953c159a857738119bc0c35de96"
+        }
+    },
+    "response": {
+        "status": {
+            "http_version": "1.1",
+            "code": "200",
+            "message": "OK"
+        },
+        "headers": {
+            "Access-Control-Allow-Headers": "Content-Type, Authorization, X-CSRFToken, X-Requested-With, Accept",
+            "Access-Control-Allow-Origin": "*",
+            "Cache-Control": "no-cache",
+            "Content-Language": "fr",
+            "Content-Type": "application\/json",
+            "Date": "Thu, 20 Aug 2015 08:30:16 GMT",
+            "Server": "nginx\/1.6.2",
+            "Vary": "Accept, Accept-Language, Cookie, Accept-Encoding, Host",
+            "X-Release-Version": "20150819T201007",
+            "Content-Length": "1371",
+            "Connection": "keep-alive"
+        },
+        "body": "{\"amount_subtotal\": \"0.00\", \"application\": {\"id\": 9, \"pk\": 9, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/application\/9\/\"}, \"billing_address\": null, \"country\": {\"code\": \"FR\", \"continent\": null, \"from_list\": false, \"id\": 72, \"languages\": [], \"lat\": null, \"lng\": null, \"name\": \"France\", \"phone_prefix\": null, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/country\/72\/\", \"sort_order\": 10, \"weight\": 200}, \"created_on\": \"2015-08-19T17:11:12+02:00\", \"currency\": \"EUR\", \"debug\": false, \"discount_amount_vat_excluded\": \"0.00000\", \"discount_amount_vat_included\": \"0.00000\", \"entered_discount_codes\": [], \"estimated_shipping_country\": \"France m\u00e9tropolitaine\", \"external_id\": null, \"from_list\": false, \"id\": 10014, \"items_count\": 0, \"last_updated\": \"2015-08-19T17:11:12+02:00\", \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/cart\/10014\/\", \"session_id\": null, \"shipping_address\": null, \"shipping_amount\": \"0.00\", \"shipping_speed\": \"standard\", \"shipping_speed_localized\": \"Standard\", \"status\": \"0\", \"status_localized\": \"Vide\", \"total_amount\": \"0.00\", \"total_amount_before_discount\": \"0.00000\", \"user\": {\"display_name\": \"sebfie\", \"first_name\": \"\", \"from_list\": false, \"gid\": \"u:14\", \"groups\": [\"Developers\"], \"id\": 14, \"last_name\": \"\", \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/user\/14\/\", \"type\": \"user\", \"username\": \"sebfie\"}}"
+    }
+},{
+    "request": {
+        "method": "GET",
+        "url": "https:\/\/api.sandbox.iceberg.technology\/v1\/cart\/10014\/items\/",
+        "headers": {
+            "Host": "api.sandbox.iceberg.technology",
+            "Content-Type": "application\/json; charset=UTF-8",
+            "Accept": "application\/json",
+            "Authorization": "IcebergAccessToken sebfie:156d219e38f84953c159a857738119bc0c35de96"
+        }
+    },
+    "response": {
+        "status": {
+            "http_version": "1.1",
+            "code": "200",
+            "message": "OK"
+        },
+        "headers": {
+            "Access-Control-Allow-Headers": "Content-Type, Authorization, X-CSRFToken, X-Requested-With, Accept",
+            "Access-Control-Allow-Origin": "*",
+            "Cache-Control": "no-cache",
+            "Content-Language": "fr",
+            "Content-Type": "application\/json",
+            "Date": "Thu, 20 Aug 2015 08:30:16 GMT",
+            "Server": "nginx\/1.6.2",
+            "Vary": "Accept, Accept-Language, Cookie, Host",
+            "X-Release-Version": "20150819T201007",
+            "Content-Length": "68",
+            "Connection": "keep-alive"
+        },
+        "body": "{\"meta\": {\"limit\": 0, \"offset\": 0, \"total_count\": 0}, \"objects\": []}"
+    }
+},{
+    "request": {
+        "method": "POST",
+        "url": "https:\/\/api.sandbox.iceberg.technology\/v1\/cart\/10014\/items\/",
+        "headers": {
+            "Host": "api.sandbox.iceberg.technology",
+            "Content-Type": "application\/json",
+            "Authorization": "IcebergAccessToken sebfie:156d219e38f84953c159a857738119bc0c35de96"
+        },
+        "body": "{\"offer_id\":27254,\"variation_id\":60873,\"quantity\":1}"
+    },
+    "response": {
+        "status": {
+            "http_version": "1.1",
+            "code": "200",
+            "message": "OK"
+        },
+        "headers": {
+            "Access-Control-Allow-Headers": "Content-Type, Authorization, X-CSRFToken, X-Requested-With, Accept",
+            "Access-Control-Allow-Origin": "*",
+            "Content-Language": "fr",
+            "Content-Type": "application\/json",
+            "Date": "Thu, 20 Aug 2015 08:30:17 GMT",
+            "Server": "nginx\/1.6.2",
+            "Vary": "Accept, Accept-Language, Cookie, Accept-Encoding, Host",
+            "X-Release-Version": "20150819T201007",
+            "transfer-encoding": "chunked",
+            "Connection": "keep-alive"
+        },
+        "body": "{\"bundled\": false, \"cart\": {\"id\": 10014, \"pk\": 10014, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/cart\/10014\/\"}, \"customization_file\": null, \"customization_value\": null, \"discounts\": [], \"external_id\": null, \"from_list\": false, \"gift\": false, \"id\": 4184, \"merchant\": {\"addresses\": [{\"address\": \"salut c'est cool\", \"address2\": \"\", \"billing_address\": false, \"city\": \"Paris\", \"contact_email\": \"test@yopmail.com\", \"contact_first_name\": \"N\/A\", \"contact_last_name\": \"N\/A\", \"contact_social_reason\": \"1\", \"country\": {\"id\": 72, \"name\": \"France\", \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/country\/72\/\", \"type\": \"country\"}, \"id\": 6, \"language\": \"fr\", \"merchant\": {\"id\": 15, \"pk\": 15, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/merchant\/15\/\", \"type\": \"merchant\"}, \"phone\": \"0610101010\", \"pk\": 6, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/merchant_address\/6\/\", \"return_address\": true, \"state\": \"\", \"zipcode\": \"75000\"}], \"application\": {\"id\": 20, \"name\": \"My Marin Application\", \"namespace\": \"app31964050047\", \"pk\": 20, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/application\/20\/\"}, \"communication_score\": null, \"cover_image\": null, \"created_on\": \"2014-07-16T10:03:15+02:00\", \"currencies\": [], \"default_currency\": \"EUR\", \"description\": \"random description 43\", \"facebook\": null, \"from_list\": false, \"gid\": \"m:15\", \"id\": 15, \"languages\": [], \"logo_image\": null, \"long_description\": \"<p class=\\\"lc\\\" style=\\\"margin-bottom: 0px; font-size: 11px; font-family: Arial, Helvetica, sans; clear: left; float: left; width: 348px; color: rgb(0, 0, 0); line-height: normal; text-align: center;\\\"><p style=\\\"text-align: justify; font-size: 11px; line-height: 14px; margin-bottom: 14px; padding: 0px;\\\">Le&nbsp;<b>Lorem Ipsum<\/b>&nbsp;est simplement du faux texte employ\u00e9 dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les ann\u00e9es 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour r\u00e9aliser un livre sp\u00e9cimen de polices de texte. Il n'a pas fait que survivre cinq si\u00e8cles, mais s'est aussi adapt\u00e9 \u00e0 la bureautique informatique, sans que son contenu n'en soit modifi\u00e9. Il a \u00e9t\u00e9 popularis\u00e9 dans les ann\u00e9es 1960 gr\u00e2ce \u00e0 la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus r\u00e9cemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.<\/p><p><br><\/p><\/p>\", \"name\": \"marin\", \"opening_hours\": null, \"overall_score\": null, \"pinterest\": null, \"prefered_language\": \"fr\", \"prefered_language_localized\": \"French\", \"products_score\": null, \"profile_image\": null, \"reactivity_score\": null, \"region\": \"FR\", \"region_localized\": \"France\", \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/merchant\/15\/\", \"shipping_policy\": 3, \"shipping_score\": null, \"slug\": \"marin\", \"status\": \"10\", \"status_comment\": \"\", \"status_localized\": \"Actif\", \"store_type\": 1, \"store_type_localized\": \"Professionnel\", \"twitter\": null, \"type\": \"m\", \"url\": \"bonjour.com\", \"wrapping_score\": null}, \"offer\": {\"id\": 27254, \"name\": \"Robe imprim\u00e9e - Orange\", \"previous_price\": \"26.000000\", \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/productoffer\/27254\/\", \"store_name\": \"marin\", \"type\": \"product_offer\"}, \"product\": {\"absolute_url\": \"\", \"id\": 27253, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/product\/27253\/\", \"type\": \"product\"}, \"product_offer_variation\": {\"capacity\": \"\", \"color\": \"\", \"id\": 60873, \"kind\": [\"size\"], \"material\": \"\", \"name\": \"M\", \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/product_variation\/60873\/\", \"size\": \"M\", \"size_name\": \"M\", \"type\": \"variation\"}, \"quantity\": 1, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/cart_item\/4184\/\", \"status\": \"10\", \"status_localized\": \"Article de panier actif\", \"timestamp\": \"2015-08-20T10:30:17.346900+02:00\", \"unit_price\": \"26.000000\", \"unit_price_vat_included\": \"31.20\", \"unit_vat\": \"5.200000\"}"
+    }
+}]
