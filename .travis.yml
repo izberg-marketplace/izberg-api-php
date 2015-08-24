@@ -13,7 +13,7 @@ php:
     - 5.4
     - 5.3
 script:
-    - phpunit tests/IcebergTest.php
+    - phpunit tests/IzbergTest.php
 
 before_script:
     - composer install

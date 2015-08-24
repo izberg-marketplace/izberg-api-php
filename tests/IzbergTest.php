@@ -3,7 +3,7 @@ error_reporting(E_ALL);
 ini_set("display_errors", 1);
 require_once "lib/iceberg.php";
 
-class IcebergTest extends PHPUnit_Framework_TestCase
+class IzbergTest extends PHPUnit_Framework_TestCase
 {
 	// ======================================
 	// TESTS FUNCTIONS

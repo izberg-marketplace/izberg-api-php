@@ -1,9 +1,9 @@
 <?php
 
 /**
- * Iceberg API class
+ * Izberg API class
  * API Documentation: http://developers.modizy.com/documentation/
- * Class Documentation: https://github.com/Modizy/Iceberg-API-PHP
+ * Class Documentation: https://github.com/Modizy/Izberg-API-PHP
  *
  * @author Sebastien FIELOUX
  * @since 30.10.2011
@@ -16,7 +16,7 @@ require_once __DIR__."/../HtmlToText/HtmlToText.php";
 require_once __DIR__."/resources/loader.php";
 
 
-class Iceberg
+class Izberg
 {
 
 	const LOGS = true;
@@ -48,9 +48,9 @@ class Iceberg
 
 
 	/**
-	* The singleton of Iceberg instance
+	* The singleton of Izberg instance
 	*
-	* @var Iceberg
+	* @var Izberg
 	*/
 	protected static $_singleton;
 
@@ -61,39 +61,39 @@ class Iceberg
 	protected static $_api_url;
 
 	/**
-	* The iceberg application namespace
+	* The izberg application namespace
 	*
 	* @var string
 	*/
 	private $_appnamespace;
 
 	/**
-	* The iceberg api secret
+	* The izberg api secret
 	*
 	* @var string
 	*/
 	private $_apisecret;
 
 	/**
-	* The iceberg application api key
+	* The izberg application api key
 	*
 	* @var string
 	*/
 	private $_apikey;
 
 	/**
-	* The iceberg application access_token
+	* The izberg application access_token
 	*
 	* @var string
 	*/
 	private $_access_token;
 
 	/**
-	* The iceberg api key
+	* The izberg api key
 	*
 	* @var string
 	*/
-	private $_iceberg_apikey;
+	private $_izberg_apikey;
 
 	/**
 	* The user email
@@ -267,12 +267,12 @@ class Iceberg
 	}
 
 	/**
-	* Iceberg API key Getter
+	* Izberg API key Getter
 	*
 	* @return String
 	*/
-	public function getIcebergApiKey() {
-		return $this->_iceberg_apikey;
+	public function getIzbergApiKey() {
+		return $this->_izberg_apikey;
 	}
 
 	/**
@@ -384,7 +384,7 @@ class Iceberg
 	{
 		$this->_single_sign_on_response = $this->_getSingleSignOnResponse($params);
 		$this->current_user = $this->getUser();
-		$this->setIcebergApiKey($this->_single_sign_on_response->api_key);
+		$this->setIzbergApiKey($this->_single_sign_on_response->api_key);
 		$this->setAccessToken($this->_single_sign_on_response->access_token);
 		$this->setUsername($this->_single_sign_on_response->username);
 		if ($this->_single_sign_on_response->username != "Anonymous") {
@@ -441,14 +441,14 @@ class Iceberg
 	}
 
 	/**
-	* Iceberg API key Setter
+	* Izberg API key Setter
 	*
 	* @param string $api_key
 	* @return String
 	*/
-	public function setIcebergApiKey($api_key)
+	public function setIzbergApiKey($api_key)
 	{
-		$this->_iceberg_apikey = $api_key;
+		$this->_izberg_apikey = $api_key;
 	}
 
 	/**
@@ -477,7 +477,7 @@ class Iceberg
 	/**
 	* Default constructor
 	*
-	* @param array|string $config          Iceberg configuration data
+	* @param array|string $config          Izberg configuration data
 	* @return void
 	*/
 	public function __construct($config)
@@ -504,7 +504,7 @@ class Iceberg
 
 			// We save this instance as singleton
 			self::setInstance($this);
-			Ice\Resource::setIceberg($this);
+			Ice\Resource::setIzberg($this);
 
 		} else {
 			throw new Exception("Error: __construct() - Configuration data is missing.");
@@ -523,7 +523,7 @@ class Iceberg
     $this->setFirstName( isset($config['firstName']) ? $config['firstName'] : "");
     $this->setLastName( isset($config['lastName']) ? $config['lastName'] : "");
 
-		// We get the iceberg api key using the Single Sign On API
+		// We get the izberg api key using the Single Sign On API
     return $this->setUser(array(
       "email" => isset($config['email']) ? $config['email'] : "",
       "first_name" => isset($config['firstName']) ? $config['firstName'] : "",
@@ -535,27 +535,27 @@ class Iceberg
 	/**
 	* Static function to get the last validated Instance
 	*
-	* @return Iceberg
+	* @return Izberg
 	*/
 	public static function getInstance()
 	{
 		if (self::$_singleton) {
 			return self::$_singleton;
 		} else {
-			throw new Exception("You should create a first validated Iceberg instance");
+			throw new Exception("You should create a first validated Izberg instance");
 		}
 	}
 
 	/**
 	* Set the default instance to a specified instance.
 	*
-	* @param Iceberg $iceberg An object instance of type Iceberg,
+	* @param Izberg $izberg An object instance of type Izberg,
 	*   or a subclass.
 	* @return void
 	*/
-	public static function setInstance(Iceberg $iceberg)
+	public static function setInstance(Izberg $izberg)
 	{
-		self::$_singleton = $iceberg;
+		self::$_singleton = $izberg;
 	}
 
 
@@ -601,9 +601,9 @@ class Iceberg
 		$apiCall = self::$_api_url . $path . (('GET' === $method) ? $paramString : null);
 
 		if (!$this->_anonymous) {
-       $h = 'Authorization: IcebergAccessToken '. $this->getUsername() . ":" . $this->getAccessToken();
+       $h = 'Authorization: IzbergAccessToken '. $this->getUsername() . ":" . $this->getAccessToken();
     } else {
-      $h = 'Authorization: IcebergAccessToken anonymous:'. $this->getAppNamespace() . ":" . $this->getAccessToken();
+      $h = 'Authorization: IzbergAccessToken anonymous:'. $this->getAppNamespace() . ":" . $this->getAccessToken();
     }
     $headers = array(
       $content_type,
@@ -624,8 +624,8 @@ class Iceberg
 		curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);
 		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 
-		// curl_setopt($ch, CURLOPT_PROXY, "127.0.0.1");
-		// curl_setopt($ch, CURLOPT_PROXYPORT, 8888);
+		curl_setopt($ch, CURLOPT_PROXY, "127.0.0.1");
+		curl_setopt($ch, CURLOPT_PROXYPORT, 8888);
 
 		if ('POST' === $method)
 		{
@@ -691,8 +691,8 @@ class Iceberg
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 
-		// curl_setopt($ch, CURLOPT_PROXY, "127.0.0.1");
-		// curl_setopt($ch, CURLOPT_PROXYPORT, 8888);
+		curl_setopt($ch, CURLOPT_PROXY, "127.0.0.1");
+		curl_setopt($ch, CURLOPT_PROXYPORT, 8888);
 
 		$jsonData = $this->curlExec($ch);
 		// list($headers, $jsonData) = explode("\r\n\r\n", $jsonData, 2);
@@ -708,7 +708,7 @@ class Iceberg
 		$jsonResponse = json_decode($jsonData);
 		// We display the error only if the HTTP code is different of 200..300
 		if (preg_match("/2\d{2}/", $httpcode)  == 0) {
-			throw new Exception("Error: from Iceberg API - error: " . $jsonData);
+			throw new Exception("Error: from Izberg API - error: " . $jsonData);
 		}
 		return $jsonResponse;
 	}
@@ -731,7 +731,7 @@ class Iceberg
 	* @returns object
 	*
 	**/
-	public function testIcebergToken()
+	public function testIzbergToken()
 	{
 		try
 		{

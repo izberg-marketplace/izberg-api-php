@@ -5,7 +5,7 @@ require_once("resource.class.php");
 class Merchant extends Resource
 {
 	public function get_list($params, $accept_type) {
-		return self::$Iceberg->Call("application/" . self::$Iceberg->getAppNamespace() . "/merchants/", 'GET', $params, $accept_type);
+		return self::$Izberg->Call("application/" . self::$Izberg->getAppNamespace() . "/merchants/", 'GET', $params, $accept_type);
 	}
 
 	public function get_catalog($merchant_id = null, $params = null, $accept_type = 'Accept: application/xml')
@@ -13,14 +13,14 @@ class Merchant extends Resource
 		if (!$merchant_id)
 			$merchant_id = $this->id;
 		$channel = $this->get_channel($merchant_id);
-		return self::$Iceberg->Call("product_channel/" . $channel->id . "/viewer/?format=xml", 'GET', $params, $accept_type);
+		return self::$Izberg->Call("product_channel/" . $channel->id . "/viewer/?format=xml", 'GET', $params, $accept_type);
 	}
 
 	public function get_channel($merchant_id = null, $params = null)
 	{
 		if (!$merchant_id)
 			$merchant_id = $this->id;
-		return self::$Iceberg->Call("merchant/".$merchant_id."/active_products_channel/", 'GET', $params);
+		return self::$Izberg->Call("merchant/".$merchant_id."/active_products_channel/", 'GET', $params);
 	}
 
 	public function getCurrent()
@@ -29,7 +29,7 @@ class Merchant extends Resource
 			return $this;
 		try
 		{
-			$seller = parent::$Iceberg->Call('merchant/?api_key='.parent::$Iceberg->getApiKey());
+			$seller = parent::$Izberg->Call('merchant/?api_key='.parent::$Izberg->getApiKey());
 		}
 		catch (Exception $e)
 		{

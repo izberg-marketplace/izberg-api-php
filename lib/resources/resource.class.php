@@ -2,7 +2,7 @@
 
 abstract class Resource
 {
-    protected static    $Iceberg = null;
+    protected static    $Izberg = null;
     protected           $_name;
 
     public function __toString()
@@ -35,7 +35,7 @@ abstract class Resource
     public function parseUri($uri)
     {
         if (strncmp("http", $uri, 4) == 0)
-            $uri = substr($uri, strlen(self::$Iceberg->getApiUrl()));
+            $uri = substr($uri, strlen(self::$Izberg->getApiUrl()));
         $uri = explode('/', $uri);
         $uri = $uri[0];
         $tabname = explode('_', $uri);
@@ -52,22 +52,22 @@ abstract class Resource
 
     public function __construct()
     {
-        if (self::$Iceberg === null)
-            throw new Exception("Can't create instance of ".get_class().", no valid Iceberg singleton");
+        if (self::$Izberg === null)
+            throw new Exception("Can't create instance of ".get_class().", no valid Izberg singleton");
         if (!$this->getName())
             $this->setName();
     }
 
     /**
-    * Every Resource may have the current Iceberg object as singleton
+    * Every Resource may have the current Izberg object as singleton
     * In order to contact the API
     *
-    * @param Iceberg Object
+    * @param Izberg Object
     *
     **/
-    public static function setIceberg($instance)
+    public static function setIzberg($instance)
     {
-        self::$Iceberg = $instance;
+        self::$Izberg = $instance;
     }
 
     /**
@@ -80,7 +80,7 @@ abstract class Resource
     public function log($message, $level="error", $path = null)
     {
         date_default_timezone_set("Europe/berlin");
-        if (false === Iceberg::LOGS)
+        if (false === Izberg::LOGS)
             return ;
         if (false === is_dir($path))
             $path = null;
@@ -147,7 +147,7 @@ abstract class Resource
     { if (!$this->id)
             throw new Exception(__METHOD__." needs a valid ID");
         $name = $this->getName();
-        return self::$Iceberg->Call( $name . "/" . $this->id . "/", 'DELETE', $params, 'Content-Type: application/json');
+        return self::$Izberg->Call( $name . "/" . $this->id . "/", 'DELETE', $params, 'Content-Type: application/json');
     }
 
     /**
@@ -165,7 +165,7 @@ abstract class Resource
         $data = (array)json_decode($data, true);
         if (!$this->id)
         {
-            $response = self::$Iceberg->Call($this->getName()."/", 'POST', $data);
+            $response = self::$Izberg->Call($this->getName()."/", 'POST', $data);
             $this->hydrate($response);
             return ;
         }
@@ -175,6 +175,6 @@ abstract class Resource
             if (!$value || is_array($value))
                 unset($data[$key]);
 
-        return self::$Iceberg->Call($addr, 'PUT', $data, "Content-Type: application/json");
+        return self::$Izberg->Call($addr, 'PUT', $data, "Content-Type: application/json");
     }
 }
