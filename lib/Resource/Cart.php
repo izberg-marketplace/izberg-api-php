@@ -118,13 +118,4 @@ class Cart extends Resource
 		return parent::$Iceberg->Call("cart/" . $id . "/" . $action . "_discount_code/", "POST", $params, 'Content-Type: application/json');
 	}
  
-	public function discountCode($code, $action)
-	{
-		$params = array(
-				'discount_code'=> $code
-				);
-		$id = $this->id ? $this->id : 'mine';
-		return parent::$Iceberg->Call("cart/" . $id . "/" . $action . "_discount_code/", "POST", $params, 'Content-Type: application/json');
-	}
-
 }
