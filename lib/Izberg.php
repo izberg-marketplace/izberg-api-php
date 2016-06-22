@@ -14,6 +14,8 @@
 namespace Izberg;
 
 require_once __DIR__."/Html2Text/Html2Text.php";
+require_once __DIR__."/Helper.php";
+require_once __DIR__."/Resource.php";
 
 class Izberg
 {
