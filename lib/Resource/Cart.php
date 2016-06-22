@@ -117,5 +117,23 @@ class Cart extends Resource
 		$id = $this->id ? $this->id : 'mine';
 		return parent::$Iceberg->Call("cart/" . $id . "/" . $action . "_discount_code/", "POST", $params, 'Content-Type: application/json');
 	}
- 
+
+	/**
+    * Clear the current Cart Items
+    *
+    * @return Object Array
+    */
+    public function clean() {
+        $this->getItems();
+        foreach ($this->items as $item) {
+        	$item->delete();
+		}
+    }
+
+	public function createIzbergCart() {
+		
+		$response = parent::$Izberg->Call($this->getName()."/", "POST" , null, 'Content-Type: application/json');
+       	$this->hydrate($response);
+        return this;
+ 	}
 }
