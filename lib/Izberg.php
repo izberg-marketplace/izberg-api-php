@@ -701,7 +701,7 @@ class Izberg
 		$nonce = $this->getNonce();
 		array_push($headers, "Application-Signature: $signature");
 		array_push($headers, "Application-Nonce: $nonce");
-
+		error_log('header signature :' . json_encode($headers));
 		curl_setopt($ch, CURLOPT_URL, $apiCall);
 		curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 		curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
@@ -990,5 +990,9 @@ class Izberg
 		$resource = "Izberg\Resource\\".$resource;
 		$object = new $resource();
 		return $this->Call($object->getPrefix() . $object->getName() ."/schema/", 'GET', $params, $accept_type);
+	}
+
+	public function isAnonymous() {
+		return $this->_anonymous;
 	}
 }
