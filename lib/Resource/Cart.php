@@ -134,6 +134,6 @@ class Cart extends Resource
 		
 		$response = parent::$Izberg->Call($this->getName()."/", "POST" , null, 'Content-Type: application/json');
        	$this->hydrate($response);
-        return this;
+        return $this;
  	}
 }

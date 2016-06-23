@@ -702,6 +702,7 @@ class Izberg
 		array_push($headers, "Application-Signature: $signature");
 		array_push($headers, "Application-Nonce: $nonce");
 		error_log('header signature :' . json_encode($headers));
+		error_log('body signature :' .json_encode($body));
 		curl_setopt($ch, CURLOPT_URL, $apiCall);
 		curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 		curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
