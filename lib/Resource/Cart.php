@@ -115,7 +115,7 @@ class Cart extends Resource
 				'discount_code'=> $code
 				);
 		$id = $this->id ? $this->id : 'mine';
-		return parent::$Iceberg->Call("cart/" . $id . "/" . $action . "_discount_code/", "POST", $params, 'Content-Type: application/json');
+		return parent::$Izberg->Call("cart/" . $id . "/" . $action . "_discount_code/", "POST", $params, 'Content-Type: application/json');
 	}
 
 	/**
