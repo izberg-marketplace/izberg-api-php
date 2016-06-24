@@ -30,6 +30,7 @@ abstract class Resource
         }
         else
             $final_str = $name;
+		error_log(' class name : ' . $final_str); 
         $this->_name = $final_str;
     }
 
