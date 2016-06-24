@@ -118,6 +118,21 @@ class Cart extends Resource
 		return parent::$Izberg->Call("cart/" . $id . "/" . $action . "_discount_code/", "POST", $params, 'Content-Type: application/json');
 	}
 
+
+	/**
+	 * Remove an item from cart
+	 * @param $id
+	 * @param string $accept_type
+	 * @return CartItem
+	 */
+	public function removeItem($id, $accept_type = 'Accept: application/json')
+	{
+		$object = new CartItem();
+		$response = parent::$Iceberg->Call($object->getName()."/".$id."/", "DELETE", array(), $accept_type);
+		$object->hydrate($response);
+		return $object;
+	}
+
 	/**
     * Clear the current Cart Items
     *
