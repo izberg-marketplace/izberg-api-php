@@ -128,7 +128,7 @@ class Cart extends Resource
 	public function removeItem($id, $accept_type = 'Accept: application/json')
 	{
 		$object = new CartItem();
-		$response = parent::$Iceberg->Call($object->getName()."/".$id."/", "DELETE", array(), $accept_type);
+		$response = parent::$Izberg->Call($object->getName()."/".$id."/", "DELETE", array(), $accept_type);
 		$object->hydrate($response);
 		return $object;
 	}
