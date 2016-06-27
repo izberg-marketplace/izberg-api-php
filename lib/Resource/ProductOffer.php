@@ -5,4 +5,5 @@ use Izberg\Resource;
 
 class Productoffer extends Resource
 {
+
 }
