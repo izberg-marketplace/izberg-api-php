@@ -328,7 +328,19 @@ $this->assertEquals($locale->languages, ["fr","it"]);
 $locale->delete();
 ```
 
-## Documentation
+## Coupons
+
+####APPLY
+
+```php
+
+  $a = $this->getIzberg();
+	$cart = $a->create("cart");
+  $cart->discountCode("code1234","add"); // "add" (default) or "remove" action
+
+```
+
+### Documentation
 
 To generate doc, we use [apigen](http://www.apigen.org/) , with this command:
 

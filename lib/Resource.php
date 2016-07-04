@@ -131,13 +131,14 @@ abstract class Resource
                       if (!class_exists($classname) && isset($value->resource_uri))
                           $classname = $this->parseUri($value->resource_uri);
                     } catch (\LogicException $e) {
+                       $this->$key = $value;
                        continue;
                     }
 
-                    if (!class_exists($classname))
+                    if (!class_exists($classname)) {
+                        $this->$key = $value;
                         continue;
-                    else
-                    {
+                    } else {
                         $new_obj = new $classname();
                         $new_obj->hydrate($value);
                         $this->$key = $new_obj;
@@ -146,13 +147,18 @@ abstract class Resource
                 else if (is_array($value) && isset($value[0]->resource_uri))
                 {
                     $classname = $this->parseUri($value[0]->resource_uri);
-                    if (!class_exists($classname))
-                        continue ;
+                    if (!class_exists($classname)) {
+                      $classname = null;
+                    }
                     $list = array();
                     foreach ($value as $val) {
-                        $new_obj = new $classname();
-                        $new_obj->hydrate($val);
-                        $list[] = $new_obj;
+                        if (!is_null($classname)) {
+                          $new_obj = new $classname();
+                          $new_obj->hydrate($val);
+                          $list[] = $new_obj;
+                        } else {
+                          $list[] = $val;
+                        }
                     }
                     $this->$key = $list;
                 }

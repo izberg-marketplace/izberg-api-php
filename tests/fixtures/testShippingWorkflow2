@@ -1,0 +1,69 @@
+[{
+    "request": {
+        "method": "GET",
+        "url": "https:\/\/api.sandbox.iceberg.technology\/v1\/cart\/35799\/shipping_options\/",
+        "headers": {
+            "Host": "api.sandbox.iceberg.technology",
+            "Content-Type": "application\/json",
+            "Content-Language": "fr",
+            "Authorization": "IcebergAccessToken sebastien_fieloux:9f89c1230c03f89c8e07ec2d702e841bdd3a30a7",
+            "Application-Signature": "4204885803bfa9f2e96c58ed477573f1a5ab3424",
+            "Application-Nonce": "1439912482"
+        }
+    },
+    "response": {
+        "status": {
+            "http_version": "1.1",
+            "code": "200",
+            "message": "OK"
+        },
+        "headers": {
+            "Access-Control-Allow-Headers": "Content-Type, Authorization, X-CSRFToken, X-Requested-With, Accept",
+            "Access-Control-Allow-Origin": "*",
+            "Cache-Control": "no-cache",
+            "Content-Language": "fr",
+            "Content-Type": "application\/json",
+            "Date": "Fri, 01 Jul 2016 09:02:21 GMT",
+            "Server": "nginx\/1.8.1",
+            "Vary": "Accept, Accept-Language, Cookie, Accept-Encoding, Host",
+            "X-Release-Version": "20160630T192437",
+            "Content-Length": "1129",
+            "Connection": "keep-alive"
+        },
+        "body": "{\"meta\": {\"cart_shipping_info\": {\"amount_with_vat\": \"0.00\", \"amount_without_vat\": \"0.00\", \"valid\": false}, \"total_count\": 1}, \"objects\": [{\"can_ship\": true, \"cart_items\": [{\"id\": 56505, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/cart_item\/56505\/\"}], \"merchant\": {\"id\": 3854, \"pk\": 3854, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/merchant\/3854\/\"}, \"message\": \"error reason\", \"shipping_choices\": [{\"amount_with_vat\": \"12.00\", \"amount_without_vat\": \"10.00\", \"collection_date\": null, \"collection_within_hours\": 2, \"currency\": \"EUR\", \"delivery_date\": null, \"delivery_within_hours\": 72, \"id\": 20, \"method\": \"banded_prices\", \"name\": \"Chronopost\", \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/cart_shipping_choice\/20\/\", \"status\": \"initial\"}, {\"amount_with_vat\": \"24.00\", \"amount_without_vat\": \"20.00\", \"collection_date\": null, \"collection_within_hours\": 2, \"currency\": \"EUR\", \"delivery_date\": null, \"delivery_within_hours\": 48, \"id\": 21, \"method\": \"banded_prices\", \"name\": \"UPS\", \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/cart_shipping_choice\/21\/\", \"status\": \"initial\"}]}]}"
+    }
+},{
+    "request": {
+        "method": "POST",
+        "url": "https:\/\/api.sandbox.iceberg.technology\/v1\/cart\/35799\/shipping_options\/",
+        "headers": {
+            "Host": "api.sandbox.iceberg.technology",
+            "Content-Type": "application\/json",
+            "Content-Language": "fr",
+            "Authorization": "IcebergAccessToken sebastien_fieloux:9f89c1230c03f89c8e07ec2d702e841bdd3a30a7",
+            "Application-Signature": "e69f44336e5696acd70a608a2ca3a6411199f816",
+            "Application-Nonce": "1439912482"
+        },
+        "body": "{\"choices\":[\"\\\/v1\\\/cart_shipping_choice\\\/20\\\/\"]}"
+    },
+    "response": {
+        "status": {
+            "http_version": "1.1",
+            "code": "200",
+            "message": "OK"
+        },
+        "headers": {
+            "Access-Control-Allow-Headers": "Content-Type, Authorization, X-CSRFToken, X-Requested-With, Accept",
+            "Access-Control-Allow-Origin": "*",
+            "Content-Language": "fr",
+            "Content-Type": "application\/json",
+            "Date": "Fri, 01 Jul 2016 09:02:23 GMT",
+            "Server": "nginx\/1.8.1",
+            "Vary": "Accept, Accept-Language, Cookie, Accept-Encoding, Host",
+            "X-Release-Version": "20160630T192437",
+            "Content-Length": "1131",
+            "Connection": "keep-alive"
+        },
+        "body": "{\"meta\": {\"cart_shipping_info\": {\"amount_with_vat\": \"12.00\", \"amount_without_vat\": \"10.00\", \"valid\": true}, \"total_count\": 1}, \"objects\": [{\"can_ship\": true, \"cart_items\": [{\"id\": 56505, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/cart_item\/56505\/\"}], \"merchant\": {\"id\": 3854, \"pk\": 3854, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/merchant\/3854\/\"}, \"message\": \"error reason\", \"shipping_choices\": [{\"amount_with_vat\": \"12.00\", \"amount_without_vat\": \"10.00\", \"collection_date\": null, \"collection_within_hours\": 2, \"currency\": \"EUR\", \"delivery_date\": null, \"delivery_within_hours\": 72, \"id\": 20, \"method\": \"banded_prices\", \"name\": \"Chronopost\", \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/cart_shipping_choice\/20\/\", \"status\": \"selected\"}, {\"amount_with_vat\": \"24.00\", \"amount_without_vat\": \"20.00\", \"collection_date\": null, \"collection_within_hours\": 2, \"currency\": \"EUR\", \"delivery_date\": null, \"delivery_within_hours\": 48, \"id\": 21, \"method\": \"banded_prices\", \"name\": \"UPS\", \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/cart_shipping_choice\/21\/\", \"status\": \"initial\"}]}]}"
+    }
+}]

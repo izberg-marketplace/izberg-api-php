@@ -1,0 +1,104 @@
+[{
+    "request": {
+        "method": "POST",
+        "url": "https:\/\/api.sandbox.iceberg.technology\/v1\/cart\/",
+        "headers": {
+            "Host": "api.sandbox.iceberg.technology",
+            "Content-Type": "application\/json",
+            "Content-Language": "fr",
+            "Authorization": "IcebergAccessToken sebfie:156d219e38f84953c159a857738119bc0c35de96",
+            "Application-Signature": "1ee82c0e7b43503824fffb6c3be9d2262af62b70",
+            "Application-Nonce": "1439912482"
+        }
+    },
+    "response": {
+        "status": {
+            "http_version": "1.1",
+            "code": "201",
+            "message": "CREATED"
+        },
+        "headers": {
+            "Access-Control-Allow-Headers": "Content-Type, Authorization, X-CSRFToken, X-Requested-With, Accept",
+            "Access-Control-Allow-Origin": "*",
+            "Content-Language": "fr",
+            "Content-Type": "application\/json",
+            "Date": "Fri, 24 Jun 2016 13:51:37 GMT",
+            "Location": "https:\/\/api.sandbox.iceberg.technology\/v1\/cart\/35591\/",
+            "Server": "nginx\/1.8.1",
+            "Vary": "Accept, Accept-Language, Cookie, Accept-Encoding, Host",
+            "X-Release-Version": "20160624T104638",
+            "Content-Length": "1490",
+            "Connection": "keep-alive"
+        },
+        "body": "{\"amount_subtotal\": \"0.00\", \"application\": {\"id\": 9, \"pk\": 9, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/application\/9\/\"}, \"billing_address\": null, \"country\": {\"code\": \"FR\", \"continent\": null, \"id\": 72, \"languages\": [], \"lat\": null, \"lng\": null, \"name\": \"France\", \"phone_prefix\": null, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/country\/72\/\", \"sort_order\": 10, \"weight\": 200}, \"created_on\": \"2016-06-24T15:51:36.736393+02:00\", \"currency\": \"EUR\", \"debug\": false, \"discount_amount_vat_excluded\": \"0\", \"discount_amount_vat_included\": \"0\", \"entered_discount_codes\": [], \"estimated_shipping_country\": \"France m\u00e9tropolitaine\", \"external_id\": null, \"id\": 35591, \"items_count\": 0, \"last_updated\": \"2016-06-24T15:51:36.736432+02:00\", \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/cart\/35591\/\", \"session_id\": null, \"shipping_address\": null, \"shipping_amount\": \"0.00\", \"shipping_details\": [], \"shipping_speed\": \"standard\", \"shipping_speed_localized\": \"Standard\", \"status\": \"0\", \"status_localized\": \"Vide\", \"total_amount\": \"0.00\", \"total_amount_before_discount\": \"0.00\", \"total_amount_before_voucher\": \"0.00\", \"user\": {\"date_joined\": \"2014-06-23T10:42:57+02:00\", \"display_name\": \"Sebastien Fieloux\", \"first_name\": \"Sebastien\", \"gid\": \"u:14\", \"groups\": [\"Developers\"], \"id\": 14, \"last_name\": \"Fieloux\", \"mail_proxy\": null, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/user\/14\/\", \"type\": \"user\", \"username\": \"sebfie\"}, \"voucher_amount\": \"0.00\"}"
+    }
+},{
+    "request": {
+        "method": "GET",
+        "url": "https:\/\/api.sandbox.iceberg.technology\/v1\/cart\/35591\/items\/",
+        "headers": {
+            "Host": "api.sandbox.iceberg.technology",
+            "Content-Type": "application\/json; charset=UTF-8",
+            "Accept": "application\/json",
+            "Content-Language": "fr",
+            "Authorization": "IcebergAccessToken sebfie:156d219e38f84953c159a857738119bc0c35de96",
+            "Application-Signature": "1ee82c0e7b43503824fffb6c3be9d2262af62b70",
+            "Application-Nonce": "1439912482"
+        }
+    },
+    "response": {
+        "status": {
+            "http_version": "1.1",
+            "code": "200",
+            "message": "OK"
+        },
+        "headers": {
+            "Access-Control-Allow-Headers": "Content-Type, Authorization, X-CSRFToken, X-Requested-With, Accept",
+            "Access-Control-Allow-Origin": "*",
+            "Cache-Control": "no-cache",
+            "Content-Language": "fr",
+            "Content-Type": "application\/json",
+            "Date": "Fri, 24 Jun 2016 13:51:40 GMT",
+            "Server": "nginx\/1.8.1",
+            "Vary": "Accept, Accept-Language, Cookie, Host",
+            "X-Release-Version": "20160624T104638",
+            "Content-Length": "68",
+            "Connection": "keep-alive"
+        },
+        "body": "{\"meta\": {\"limit\": 0, \"offset\": 0, \"total_count\": 0}, \"objects\": []}"
+    }
+},{
+    "request": {
+        "method": "POST",
+        "url": "https:\/\/api.sandbox.iceberg.technology\/v1\/cart\/35591\/items\/",
+        "headers": {
+            "Host": "api.sandbox.iceberg.technology",
+            "Content-Type": "application\/json",
+            "Content-Language": "fr",
+            "Authorization": "IcebergAccessToken sebfie:156d219e38f84953c159a857738119bc0c35de96",
+            "Application-Signature": "68c39484c29df75012b1a5452687c08989b3b1c2",
+            "Application-Nonce": "1439912482"
+        },
+        "body": "{\"offer_id\":38895,\"variation_id\":null,\"quantity\":1}"
+    },
+    "response": {
+        "status": {
+            "http_version": "1.1",
+            "code": "200",
+            "message": "OK"
+        },
+        "headers": {
+            "Access-Control-Allow-Headers": "Content-Type, Authorization, X-CSRFToken, X-Requested-With, Accept",
+            "Access-Control-Allow-Origin": "*",
+            "Content-Language": "fr",
+            "Content-Type": "application\/json",
+            "Date": "Fri, 24 Jun 2016 13:51:41 GMT",
+            "Server": "nginx\/1.8.1",
+            "Vary": "Accept, Accept-Language, Cookie, Accept-Encoding, Host",
+            "X-Release-Version": "20160624T104638",
+            "Content-Length": "3129",
+            "Connection": "keep-alive"
+        },
+        "body": "{\"bundled\": false, \"cart\": {\"id\": 35591, \"pk\": 35591, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/cart\/35591\/\"}, \"custom_image\": null, \"custom_image_height\": null, \"custom_image_width\": null, \"custom_name\": null, \"customization_file\": null, \"customization_value\": null, \"discounts\": [], \"external_id\": null, \"extra_info\": {}, \"gift\": false, \"id\": 56268, \"merchant\": {\"addresses\": [], \"application\": {\"id\": 9, \"name\": \"DemoMarketplace\", \"namespace\": \"lolote\", \"pk\": 9, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/application\/9\/\"}, \"attributes\": {}, \"book_before_delay\": null, \"book_before_hour\": null, \"communication_score\": null, \"cover_image\": null, \"created_on\": \"2015-04-16T14:54:43+02:00\", \"currencies\": [{\"code\": \"EUR\", \"pk\": \"EUR\", \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/currency\/EUR\/\"}], \"default_currency\": \"EUR\", \"description\": \"Vente de boucles d'oreilles fait main\", \"external_id\": null, \"facebook\": null, \"gid\": \"m:726\", \"id\": 726, \"in_sellers_directory\": true, \"keywords\": [], \"languages\": [\"fr\"], \"last_modified\": \"2015-04-16T14:59:14+02:00\", \"logo_image\": null, \"long_description\": \"Vente de boucles d'oreilles fait main\", \"mail_proxy\": null, \"name\": \"Lolote.fr\", \"offer_type\": \"product_offers\", \"opening_hours\": null, \"overall_score\": null, \"pinterest\": null, \"prefered_language\": \"fr\", \"prefered_language_localized\": \"French\", \"products_score\": null, \"profile_image\": null, \"reactivity_score\": null, \"region\": \"FR\", \"region_localized\": \"France\", \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/merchant\/726\/\", \"shipping_policy\": 3, \"shipping_score\": null, \"slug\": \"lolotefr\", \"status\": \"10\", \"status_comment\": \"\", \"status_localized\": \"Actif\", \"store_type\": 1, \"store_type_localized\": \"Professionnel\", \"timezone\": \"Europe\/Paris\", \"title\": null, \"twitter\": null, \"type\": \"m\", \"url\": null, \"wrapping_score\": null}, \"name\": \"Boucles d'oreilles - Troisieme oeil\", \"number_of_people\": null, \"offer\": {\"id\": 38895, \"name\": \"Boucles d'oreilles - Troisieme oeil\", \"previous_price\": \"6.000000\", \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/productoffer\/38895\/\", \"store_name\": \"Lolote.fr\", \"type\": \"product_offer\"}, \"option_answers\": [], \"price_management\": \"izberg\", \"product\": {\"absolute_url\": \"\", \"id\": 39277, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/product\/39277\/\", \"type\": \"product\"}, \"product_brand\": {\"id\": 585, \"name\": \"Lolote.fr\", \"pk\": 585, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/brand\/585\/\"}, \"product_offer\": {\"id\": 38895, \"pk\": 38895, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/productoffer\/38895\/\"}, \"product_offer_variation\": null, \"quantity\": 1, \"reservations\": [], \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/cart_item\/56268\/\", \"service_offer\": null, \"service_offer_variation\": null, \"sku\": \"CREA\/VERR\/TROI\", \"status\": \"10\", \"status_localized\": \"Panier actif\", \"timestamp\": \"2016-06-24T15:51:41.222871+02:00\", \"unit_price\": \"6.000000\", \"unit_price_vat_included\": \"7.20\", \"unit_shipping\": \"0\", \"unit_vat\": \"1.200000\", \"variation_name\": \"\", \"variation_sku\": null}"
+    }
+}]

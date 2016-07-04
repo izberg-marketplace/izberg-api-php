@@ -1,0 +1,33 @@
+[{
+    "request": {
+        "method": "POST",
+        "url": "https:\/\/api.sandbox.iceberg.technology\/v1\/shipping_provider\/",
+        "headers": {
+            "Host": "api.sandbox.iceberg.technology",
+            "Content-Type": "application\/json",
+            "Content-Language": "fr",
+            "Authorization": "IcebergAccessToken sebastien_fieloux:9f89c1230c03f89c8e07ec2d702e841bdd3a30a7",
+            "Application-Signature": "9929a128d21371d52f12d23ea00af61133870170",
+            "Application-Nonce": "1439912482"
+        },
+        "body": "{\"integrator\":false,\"method\":\"sebfie\",\"application\":\"\\\/v1\\\/application\\\/36\\\/\",\"zone\":\"\\\/v1\\\/zone\\\/5\\\/\"}"
+    },
+    "response": {
+        "status": {
+            "http_version": "1.1",
+            "code": "401",
+            "message": "UNAUTHORIZED"
+        },
+        "headers": {
+            "Access-Control-Allow-Origin": "*",
+            "Content-Language": "fr",
+            "Content-Type": "text\/html; charset=utf-8",
+            "Date": "Thu, 30 Jun 2016 09:22:19 GMT",
+            "Server": "nginx\/1.8.1",
+            "Vary": "Accept-Language, Cookie, Host",
+            "X-Release-Version": "20160629T160124",
+            "Content-Length": "0",
+            "Connection": "keep-alive"
+        }
+    }
+}]

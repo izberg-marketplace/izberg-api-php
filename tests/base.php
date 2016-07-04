@@ -5,6 +5,16 @@ ini_set("display_errors", 1);
 abstract class BaseTester extends PHPUnit_Framework_TestCase
 {
 
+  public function getShippingIzberg()
+  {
+    return $this->getIzberg(array(
+        "appNamespace" => "sebastien2",
+        "username" => "sebastien_fieloux",
+        "accessToken" => "9f89c1230c03f89c8e07ec2d702e841bdd3a30a7",
+        "apiSecret" => "3fec10fc-26db-44c2-b366-aeac8e8e526d ",
+        "sandbox" => true
+    ));
+  }
   public function getIzberg($options = array(), $extra_mocks_methods = array())
 	{
 		if (empty($options)) {

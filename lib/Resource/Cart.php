@@ -109,46 +109,81 @@ class Cart extends Resource
         return parent::$Izberg->Call($this->getName()."/items/", "POST", $params);
     }
 
-	public function discountCode($code, $action)
+    
+	/**
+ 	  * Remove an item from cart
+ 	  * @param $id
+ 	  * @param string $accept_type
+ 	  * @return CartItem
+ 	  */
+ 	  public function removeItem($id, $accept_type = 'Accept: application/json')
+ 	  {
+      $object = new CartItem();
+      $response = parent::$Izberg->Call($object->getName()."/".$id."/", "DELETE", array(), $accept_type);
+      $object->hydrate($response);
+      return $object;
+ 	  }
+
+    /**
+ 	  * Apply a coupon code
+ 	  * @param $code
+ 	  * @param string $action
+ 	  * @return DiscountCode
+ 	  */
+    public function discountCode($code, $action = "add")
     {
-		$params = array(
-				'discount_code'=> $code
-				);
-		$id = $this->id ? $this->id : 'mine';
-		return parent::$Izberg->Call("cart/" . $id . "/" . $action . "_discount_code/", "POST", $params, 'Content-Type: application/json');
-	}
-
-
-	/**
-	 * Remove an item from cart
-	 * @param $id
-	 * @param string $accept_type
-	 * @return CartItem
-	 */
-	public function removeItem($id, $accept_type = 'Accept: application/json')
-	{
-		$object = new CartItem();
-		$response = parent::$Izberg->Call($object->getName()."/".$id."/", "DELETE", array(), $accept_type);
-		$object->hydrate($response);
-		return $object;
-	}
-
-	/**
-    * Clear the current Cart Items
-    *
-    * @return Object Array
-    */
-    public function clean() {
-        $this->getItems();
-        foreach ($this->items as $item) {
-        	$item->delete();
-		}
+      $params = array('discount_code'=> $code);
+      $id = $this->id ? $this->id : 'mine';
+      return parent::$Izberg->Call("cart/" . $id . "/" . $action . "_discount_code/", "POST", $params, 'Content-Type: application/json');
     }
 
-	public function createIzbergCart() {
-		
-		$response = parent::$Izberg->Call($this->getName()."/", "POST" , null, 'Content-Type: application/json');
-       	$this->hydrate($response);
-        return $this;
- 	}
+    /**
+    * Remove all cart items
+    * @return Boolean
+    */
+    public function clean() {
+      $this->getItems();
+      foreach ($this->items as $item) {
+        $item->delete();
+      }
+      return true;
+    }
+
+
+    /**
+    * Remove all shipping options
+    * @return Array
+    */
+    public function shippingOptions() {
+      $id = $this->id ? $this->id : 'mine';
+      return parent::$Izberg->Call("cart/" . $id . "/shipping_options/" , "GET", null, 'Content-Type: application/json');
+    }
+
+    /**
+    * Select a shipping option
+    * @return ShippingOption
+    */
+    public function selectShippingOption($option_id) {
+      $id = $this->id ? $this->id : 'mine';
+      return parent::$Izberg->Call("cart/" . $id . "/shipping_options/" . $option_id . "/select/" , "POST", array(), 'Content-Type: application/json');
+    }
+
+    /**
+    * Select multiple shipping options
+    * @param Array $ids
+    * @return Array
+    */
+    public function selectShippingOptions($params) {
+      $id = $this->id ? $this->id : 'mine';
+      return parent::$Izberg->Call("cart/" . $id . "/shipping_options/" , "POST", $params, 'Content-Type: application/json');
+    }
+
+    /**
+    * Update all available shipping options for cart
+    * @return Array
+    */
+    public function updateShippingOptions() {
+      $id = $this->id ? $this->id : 'mine';
+      return parent::$Izberg->Call("cart/" . $id . "/shipping_options/update/" , "POST", null, 'Content-Type: application/json');
+    }
 }

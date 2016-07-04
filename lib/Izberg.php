@@ -90,7 +90,7 @@ class Izberg
 
 
 	/**
-	* The izberg application access_token
+	* The access_token of a application staff user 
 	*
 	* @var string
 	*/

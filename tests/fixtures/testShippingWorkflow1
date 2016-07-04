@@ -1,0 +1,274 @@
+[{
+    "request": {
+        "method": "POST",
+        "url": "https:\/\/api.sandbox.iceberg.technology\/v1\/cart\/",
+        "headers": {
+            "Host": "api.sandbox.iceberg.technology",
+            "Content-Type": "application\/json",
+            "Content-Language": "fr",
+            "Authorization": "IcebergAccessToken sebastien_fieloux:9f89c1230c03f89c8e07ec2d702e841bdd3a30a7",
+            "Application-Signature": "4204885803bfa9f2e96c58ed477573f1a5ab3424",
+            "Application-Nonce": "1439912482"
+        }
+    },
+    "response": {
+        "status": {
+            "http_version": "1.1",
+            "code": "201",
+            "message": "CREATED"
+        },
+        "headers": {
+            "Access-Control-Allow-Headers": "Content-Type, Authorization, X-CSRFToken, X-Requested-With, Accept",
+            "Access-Control-Allow-Origin": "*",
+            "Content-Language": "fr",
+            "Content-Type": "application\/json",
+            "Date": "Fri, 01 Jul 2016 09:02:12 GMT",
+            "Location": "https:\/\/api.sandbox.iceberg.technology\/v1\/cart\/35799\/",
+            "Server": "nginx\/1.8.1",
+            "Vary": "Accept, Accept-Language, Cookie, Accept-Encoding, Host",
+            "X-Release-Version": "20160630T192437",
+            "Content-Length": "1495",
+            "Connection": "keep-alive"
+        },
+        "body": "{\"amount_subtotal\": \"0.00\", \"application\": {\"id\": 732, \"pk\": 732, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/application\/732\/\"}, \"billing_address\": null, \"country\": {\"code\": \"FR\", \"continent\": null, \"id\": 72, \"languages\": [], \"lat\": null, \"lng\": null, \"name\": \"France\", \"phone_prefix\": null, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/country\/72\/\", \"sort_order\": 10, \"weight\": 200}, \"created_on\": \"2016-07-01T11:02:12.531838+02:00\", \"currency\": \"EUR\", \"debug\": false, \"discount_amount_vat_excluded\": \"0\", \"discount_amount_vat_included\": \"0\", \"entered_discount_codes\": [], \"estimated_shipping_country\": \"France m\u00e9tropolitaine\", \"external_id\": null, \"id\": 35799, \"items_count\": 0, \"last_updated\": \"2016-07-01T11:02:12.531880+02:00\", \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/cart\/35799\/\", \"session_id\": null, \"shipping_address\": null, \"shipping_amount\": \"0.00\", \"shipping_details\": [], \"shipping_speed\": \"standard\", \"shipping_speed_localized\": \"Standard\", \"status\": \"0\", \"status_localized\": \"Vide\", \"total_amount\": \"0.00\", \"total_amount_before_discount\": \"0.00\", \"total_amount_before_voucher\": \"0.00\", \"user\": {\"date_joined\": \"2014-07-28T10:04:58+02:00\", \"display_name\": \"Sebastien Fieloux\", \"first_name\": \"Sebastien\", \"gid\": \"u:73\", \"groups\": [], \"id\": 73, \"last_name\": \"Fieloux\", \"mail_proxy\": null, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/user\/73\/\", \"type\": \"user\", \"username\": \"sebastien_fieloux\"}, \"voucher_amount\": \"0.00\"}"
+    }
+},{
+    "request": {
+        "method": "POST",
+        "url": "https:\/\/api.sandbox.iceberg.technology\/v1\/cart\/35799\/items\/",
+        "headers": {
+            "Host": "api.sandbox.iceberg.technology",
+            "Content-Type": "application\/json",
+            "Content-Language": "fr",
+            "Authorization": "IcebergAccessToken sebastien_fieloux:9f89c1230c03f89c8e07ec2d702e841bdd3a30a7",
+            "Application-Signature": "2491d1bb79e63f336fd9e75cc4b11286a9a6805b",
+            "Application-Nonce": "1439912482"
+        },
+        "body": "{\"offer_id\":1059252,\"variation_id\":null,\"quantity\":1}"
+    },
+    "response": {
+        "status": {
+            "http_version": "1.1",
+            "code": "200",
+            "message": "OK"
+        },
+        "headers": {
+            "Access-Control-Allow-Headers": "Content-Type, Authorization, X-CSRFToken, X-Requested-With, Accept",
+            "Access-Control-Allow-Origin": "*",
+            "Content-Language": "fr",
+            "Content-Type": "application\/json",
+            "Date": "Fri, 01 Jul 2016 09:02:13 GMT",
+            "Server": "nginx\/1.8.1",
+            "Vary": "Accept, Accept-Language, Cookie, Accept-Encoding, Host",
+            "X-Release-Version": "20160630T192437",
+            "Content-Length": "3044",
+            "Connection": "keep-alive"
+        },
+        "body": "{\"bundled\": false, \"cart\": {\"id\": 35799, \"pk\": 35799, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/cart\/35799\/\"}, \"custom_image\": null, \"custom_image_height\": null, \"custom_image_width\": null, \"custom_name\": null, \"customization_file\": null, \"customization_value\": null, \"discounts\": [], \"external_id\": null, \"extra_info\": {}, \"gift\": false, \"id\": 56505, \"merchant\": {\"addresses\": [], \"application\": {\"id\": 732, \"name\": \"Sebastien2\", \"namespace\": \"sebastien2\", \"pk\": 732, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/application\/732\/\"}, \"attributes\": {}, \"book_before_delay\": null, \"book_before_hour\": null, \"communication_score\": null, \"cover_image\": null, \"created_on\": \"2016-06-30T11:35:42+02:00\", \"currencies\": [{\"code\": \"EUR\", \"pk\": \"EUR\", \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/currency\/EUR\/\"}], \"default_currency\": \"EUR\", \"description\": \"\", \"external_id\": null, \"facebook\": null, \"gid\": \"m:3854\", \"id\": 3854, \"in_sellers_directory\": true, \"keywords\": [], \"languages\": [\"fr\"], \"last_modified\": \"2016-07-01T10:15:30+02:00\", \"logo_image\": null, \"long_description\": \"\", \"mail_proxy\": null, \"name\": \"Shopboutique\", \"offer_type\": \"product_offers\", \"opening_hours\": null, \"overall_score\": null, \"pinterest\": null, \"prefered_language\": \"fr\", \"prefered_language_localized\": \"French\", \"products_score\": null, \"profile_image\": null, \"reactivity_score\": null, \"region\": \"FR\", \"region_localized\": \"France\", \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/merchant\/3854\/\", \"shipping_policy\": 3, \"shipping_score\": null, \"slug\": \"shopboutique\", \"status\": \"10\", \"status_comment\": \"\", \"status_localized\": \"Actif\", \"store_type\": 1, \"store_type_localized\": \"Professionnel\", \"timezone\": \"Europe\/Paris\", \"title\": null, \"twitter\": null, \"type\": \"m\", \"url\": null, \"wrapping_score\": null}, \"name\": \"IPhone 5C Jaune 32 Go\", \"number_of_people\": null, \"offer\": {\"id\": 1059252, \"name\": \"IPhone 5C Jaune 32 Go\", \"previous_price\": null, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/productoffer\/1059252\/\", \"store_name\": \"Shopboutique\", \"type\": \"product_offer\"}, \"option_answers\": [], \"price_management\": \"izberg\", \"product\": {\"absolute_url\": \"\", \"id\": 2289259, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/product\/2289259\/\", \"type\": \"product\"}, \"product_brand\": {\"id\": 340, \"name\": \"Apple\", \"pk\": 340, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/brand\/340\/\"}, \"product_offer\": {\"id\": 1059252, \"pk\": 1059252, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/productoffer\/1059252\/\"}, \"product_offer_variation\": null, \"quantity\": 1, \"reservations\": [], \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/cart_item\/56505\/\", \"service_offer\": null, \"service_offer_variation\": null, \"sku\": \"ST12\", \"status\": \"10\", \"status_localized\": \"Panier actif\", \"timestamp\": \"2016-07-01T11:02:13.270138+02:00\", \"unit_price\": \"390.833333\", \"unit_price_vat_included\": \"469.00\", \"unit_shipping\": \"0\", \"unit_vat\": \"78.166667\", \"variation_name\": \"\", \"variation_sku\": null}"
+    }
+},{
+    "request": {
+        "method": "GET",
+        "url": "https:\/\/api.sandbox.iceberg.technology\/v1\/country\/?code=FR",
+        "headers": {
+            "Host": "api.sandbox.iceberg.technology",
+            "Content-Type": "application\/json; charset=UTF-8",
+            "Accept": "application\/json",
+            "Content-Language": "fr",
+            "Authorization": "IcebergAccessToken sebastien_fieloux:9f89c1230c03f89c8e07ec2d702e841bdd3a30a7",
+            "Application-Signature": "16e0bad135b3b8f5f6429bd122e5233889974bce",
+            "Application-Nonce": "1439912482"
+        }
+    },
+    "response": {
+        "status": {
+            "http_version": "1.1",
+            "code": "200",
+            "message": "OK"
+        },
+        "headers": {
+            "Access-Control-Allow-Headers": "Content-Type, Authorization, X-CSRFToken, X-Requested-With, Accept",
+            "Access-Control-Allow-Origin": "*",
+            "Cache-Control": "no-cache",
+            "Content-Language": "fr",
+            "Content-Type": "application\/json",
+            "Date": "Fri, 01 Jul 2016 09:02:14 GMT",
+            "Server": "nginx\/1.8.1",
+            "Vary": "Accept, Accept-Language, Cookie, Accept-Encoding, Host",
+            "X-Release-Version": "20160630T192437",
+            "Content-Length": "334",
+            "Connection": "keep-alive"
+        },
+        "body": "{\"meta\": {\"limit\": 100, \"next\": null, \"offset\": 0, \"previous\": null, \"total_count\": 1}, \"objects\": [{\"code\": \"FR\", \"continent\": null, \"id\": 72, \"languages\": [], \"lat\": null, \"lng\": null, \"name\": \"France\", \"phone_prefix\": null, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/country\/72\/\", \"sort_order\": 10, \"weight\": 200}]}"
+    }
+},{
+    "request": {
+        "method": "POST",
+        "url": "https:\/\/api.sandbox.iceberg.technology\/v1\/address\/",
+        "headers": {
+            "Host": "api.sandbox.iceberg.technology",
+            "Content-Type": "application\/json",
+            "Content-Language": "fr",
+            "Authorization": "IcebergAccessToken sebastien_fieloux:9f89c1230c03f89c8e07ec2d702e841bdd3a30a7",
+            "Application-Signature": "21e8bdc65a2d85a0a5b9c6636873be62ec45f49e",
+            "Application-Nonce": "1439912482"
+        },
+        "body": "{\"address\":\"Address line 1\",\"address2\":\"Address line 2\",\"city\":\"St remy de provence\",\"company\":\"Sebfie\",\"country\":\"\\\/v1\\\/country\\\/72\\\/\",\"digicode\":null,\"first_name\":\"sebastien\",\"floor\":null,\"last_name\":\"fieloux\",\"name\":\"House\",\"phone\":\"0698674532\",\"state\":null,\"status\":10,\"zipcode\":\"13210\"}"
+    },
+    "response": {
+        "status": {
+            "http_version": "1.1",
+            "code": "201",
+            "message": "CREATED"
+        },
+        "headers": {
+            "Access-Control-Allow-Headers": "Content-Type, Authorization, X-CSRFToken, X-Requested-With, Accept",
+            "Access-Control-Allow-Origin": "*",
+            "Content-Language": "fr",
+            "Content-Type": "application\/json",
+            "Date": "Fri, 01 Jul 2016 09:02:14 GMT",
+            "Location": "https:\/\/api.sandbox.iceberg.technology\/v1\/address\/24253\/",
+            "Server": "nginx\/1.8.1",
+            "Vary": "Accept, Accept-Language, Cookie, Accept-Encoding, Host",
+            "X-Release-Version": "20160630T192437",
+            "Content-Length": "916",
+            "Connection": "keep-alive"
+        },
+        "body": "{\"_default_billing\": false, \"_default_shipping\": false, \"address\": \"Address line 1\", \"address2\": \"Address line 2\", \"application\": {\"id\": 732, \"pk\": 732, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/application\/732\/\"}, \"city\": \"St remy de provence\", \"company\": \"Sebfie\", \"country\": {\"id\": 72, \"name\": \"France\", \"pk\": 72, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/country\/72\/\"}, \"default_billing\": false, \"default_shipping\": false, \"digicode\": null, \"evening_phone\": \"\", \"external_id\": null, \"fax\": \"\", \"first_name\": \"sebastien\", \"floor\": null, \"id\": 24253, \"last_name\": \"fieloux\", \"name\": \"House\", \"phone\": \"0698674532\", \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/address\/24253\/\", \"state\": null, \"status\": \"10\", \"status_localized\": \"Adresse active \", \"user\": {\"id\": 73, \"pk\": 73, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/user\/73\/\"}, \"zipcode\": \"13210\"}"
+    }
+},{
+    "request": {
+        "method": "PUT",
+        "url": "https:\/\/api.sandbox.iceberg.technology\/v1\/cart\/35799\/",
+        "headers": {
+            "Host": "api.sandbox.iceberg.technology",
+            "Content-Type": "application\/json",
+            "Content-Language": "fr",
+            "Authorization": "IcebergAccessToken sebastien_fieloux:9f89c1230c03f89c8e07ec2d702e841bdd3a30a7",
+            "Application-Signature": "fd0e201026d7d01dd7accadf95dc0e900eefbcdf",
+            "Application-Nonce": "1439912482"
+        },
+        "body": "{\"billing_address\":\"\\\/v1\\\/address\\\/24253\\\/\"}"
+    },
+    "response": {
+        "status": {
+            "http_version": "1.1",
+            "code": "202",
+            "message": "ACCEPTED"
+        },
+        "headers": {
+            "Access-Control-Allow-Headers": "Content-Type, Authorization, X-CSRFToken, X-Requested-With, Accept",
+            "Access-Control-Allow-Origin": "*",
+            "Content-Language": "fr",
+            "Content-Type": "application\/json",
+            "Date": "Fri, 01 Jul 2016 09:02:16 GMT",
+            "Server": "nginx\/1.8.1",
+            "Vary": "Accept, Accept-Language, Cookie, Accept-Encoding, Host",
+            "X-Release-Version": "20160630T192437",
+            "Content-Length": "2534",
+            "Connection": "keep-alive"
+        },
+        "body": "{\"amount_subtotal\": \"469.00\", \"application\": {\"id\": 732, \"pk\": 732, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/application\/732\/\"}, \"billing_address\": {\"address\": \"Address line 1\", \"address2\": \"Address line 2\", \"application\": {\"id\": 732, \"pk\": 732, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/application\/732\/\"}, \"city\": \"St remy de provence\", \"company\": \"Sebfie\", \"country\": {\"id\": 72, \"name\": \"France\", \"pk\": 72, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/country\/72\/\"}, \"default_billing\": false, \"default_shipping\": false, \"digicode\": null, \"external_id\": null, \"first_name\": \"sebastien\", \"floor\": null, \"id\": 24253, \"last_name\": \"fieloux\", \"name\": \"House\", \"phone\": \"0698674532\", \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/address\/24253\/\", \"state\": null, \"status\": \"10\", \"status_localized\": \"Adresse active \", \"user\": {\"id\": 73, \"pk\": 73, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/user\/73\/\"}, \"zipcode\": \"13210\"}, \"country\": {\"code\": \"FR\", \"continent\": null, \"id\": 72, \"languages\": [], \"lat\": null, \"lng\": null, \"name\": \"France\", \"phone_prefix\": null, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/country\/72\/\", \"sort_order\": 10, \"weight\": 200}, \"created_on\": \"2016-07-01T11:02:12+02:00\", \"currency\": \"EUR\", \"debug\": false, \"discount_amount_vat_excluded\": \"0\", \"discount_amount_vat_included\": \"0\", \"entered_discount_codes\": [], \"estimated_shipping_country\": \"France m\u00e9tropolitaine\", \"external_id\": null, \"id\": 35799, \"items_count\": 1, \"last_updated\": \"2016-07-01T11:02:15.439898+02:00\", \"pk\": \"35799\", \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/cart\/35799\/\", \"session_id\": null, \"shipping_address\": null, \"shipping_amount\": \"12.00\", \"shipping_details\": [{\"discounted\": false, \"merchant_id\": 3854, \"merchant_policy\": \"MerchantPolicyParameter object\", \"merchant_shipping\": \"10.00\", \"merchant_shipping_vat_included\": \"12.00\", \"vat_on_shipping\": \"2.00\"}], \"shipping_speed\": \"standard\", \"shipping_speed_localized\": \"Standard\", \"status\": \"10\", \"status_localized\": \"Actif\", \"total_amount\": \"481.00\", \"total_amount_before_discount\": \"481.00\", \"total_amount_before_voucher\": \"481.00\", \"user\": {\"date_joined\": \"2014-07-28T10:04:58+02:00\", \"display_name\": \"Sebastien Fieloux\", \"first_name\": \"Sebastien\", \"gid\": \"u:73\", \"groups\": [], \"id\": 73, \"last_name\": \"Fieloux\", \"mail_proxy\": null, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/user\/73\/\", \"type\": \"user\", \"username\": \"sebastien_fieloux\"}, \"voucher_amount\": \"0.00\"}"
+    }
+},{
+    "request": {
+        "method": "PUT",
+        "url": "https:\/\/api.sandbox.iceberg.technology\/v1\/cart\/35799\/",
+        "headers": {
+            "Host": "api.sandbox.iceberg.technology",
+            "Content-Type": "application\/json",
+            "Content-Language": "fr",
+            "Authorization": "IcebergAccessToken sebastien_fieloux:9f89c1230c03f89c8e07ec2d702e841bdd3a30a7",
+            "Application-Signature": "f4e4c975c2c4c928dd5049cca203f9f4bd2d556d",
+            "Application-Nonce": "1439912482"
+        },
+        "body": "{\"shipping_address\":\"\\\/v1\\\/address\\\/24253\\\/\"}"
+    },
+    "response": {
+        "status": {
+            "http_version": "1.1",
+            "code": "202",
+            "message": "ACCEPTED"
+        },
+        "headers": {
+            "Access-Control-Allow-Headers": "Content-Type, Authorization, X-CSRFToken, X-Requested-With, Accept",
+            "Access-Control-Allow-Origin": "*",
+            "Content-Language": "fr",
+            "Content-Type": "application\/json",
+            "Date": "Fri, 01 Jul 2016 09:02:18 GMT",
+            "Server": "nginx\/1.8.1",
+            "Vary": "Accept, Accept-Language, Cookie, Accept-Encoding, Host",
+            "X-Release-Version": "20160630T192437",
+            "Content-Length": "3360",
+            "Connection": "keep-alive"
+        },
+        "body": "{\"amount_subtotal\": \"469.00\", \"application\": {\"id\": 732, \"pk\": 732, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/application\/732\/\"}, \"billing_address\": {\"address\": \"Address line 1\", \"address2\": \"Address line 2\", \"application\": {\"id\": 732, \"pk\": 732, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/application\/732\/\"}, \"city\": \"St remy de provence\", \"company\": \"Sebfie\", \"country\": {\"id\": 72, \"name\": \"France\", \"pk\": 72, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/country\/72\/\"}, \"default_billing\": false, \"default_shipping\": false, \"digicode\": null, \"external_id\": null, \"first_name\": \"sebastien\", \"floor\": null, \"id\": 24253, \"last_name\": \"fieloux\", \"name\": \"House\", \"phone\": \"0698674532\", \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/address\/24253\/\", \"state\": null, \"status\": \"10\", \"status_localized\": \"Adresse active \", \"user\": {\"id\": 73, \"pk\": 73, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/user\/73\/\"}, \"zipcode\": \"13210\"}, \"country\": {\"code\": \"FR\", \"continent\": null, \"id\": 72, \"languages\": [], \"lat\": null, \"lng\": null, \"name\": \"France\", \"phone_prefix\": null, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/country\/72\/\", \"sort_order\": 10, \"weight\": 200}, \"created_on\": \"2016-07-01T11:02:12+02:00\", \"currency\": \"EUR\", \"debug\": false, \"discount_amount_vat_excluded\": \"0\", \"discount_amount_vat_included\": \"0\", \"entered_discount_codes\": [], \"estimated_shipping_country\": \"France m\u00e9tropolitaine\", \"external_id\": null, \"id\": 35799, \"items_count\": 1, \"last_updated\": \"2016-07-01T11:02:16.910126+02:00\", \"pk\": \"35799\", \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/cart\/35799\/\", \"session_id\": null, \"shipping_address\": {\"address\": \"Address line 1\", \"address2\": \"Address line 2\", \"application\": {\"id\": 732, \"pk\": 732, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/application\/732\/\"}, \"city\": \"St remy de provence\", \"company\": \"Sebfie\", \"country\": {\"id\": 72, \"name\": \"France\", \"pk\": 72, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/country\/72\/\"}, \"default_billing\": false, \"default_shipping\": false, \"digicode\": null, \"external_id\": null, \"first_name\": \"sebastien\", \"floor\": null, \"id\": 24253, \"last_name\": \"fieloux\", \"name\": \"House\", \"phone\": \"0698674532\", \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/address\/24253\/\", \"state\": null, \"status\": \"10\", \"status_localized\": \"Adresse active \", \"user\": {\"id\": 73, \"pk\": 73, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/user\/73\/\"}, \"zipcode\": \"13210\"}, \"shipping_amount\": \"12.00\", \"shipping_details\": [{\"discounted\": false, \"merchant_id\": 3854, \"merchant_policy\": \"MerchantPolicyParameter object\", \"merchant_shipping\": \"10.00\", \"merchant_shipping_vat_included\": \"12.00\", \"vat_on_shipping\": \"2.00\"}], \"shipping_speed\": \"standard\", \"shipping_speed_localized\": \"Standard\", \"status\": \"20\", \"status_localized\": \"Valide\", \"total_amount\": \"481.00\", \"total_amount_before_discount\": \"481.00\", \"total_amount_before_voucher\": \"481.00\", \"user\": {\"date_joined\": \"2014-07-28T10:04:58+02:00\", \"display_name\": \"Sebastien Fieloux\", \"first_name\": \"Sebastien\", \"gid\": \"u:73\", \"groups\": [], \"id\": 73, \"last_name\": \"Fieloux\", \"mail_proxy\": null, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/user\/73\/\", \"type\": \"user\", \"username\": \"sebastien_fieloux\"}, \"voucher_amount\": \"0.00\"}"
+    }
+},{
+    "request": {
+        "method": "GET",
+        "url": "https:\/\/api.sandbox.iceberg.technology\/v1\/cart\/35799\/shipping_options\/",
+        "headers": {
+            "Host": "api.sandbox.iceberg.technology",
+            "Content-Type": "application\/json",
+            "Content-Language": "fr",
+            "Authorization": "IcebergAccessToken sebastien_fieloux:9f89c1230c03f89c8e07ec2d702e841bdd3a30a7",
+            "Application-Signature": "4204885803bfa9f2e96c58ed477573f1a5ab3424",
+            "Application-Nonce": "1439912482"
+        }
+    },
+    "response": {
+        "status": {
+            "http_version": "1.1",
+            "code": "200",
+            "message": "OK"
+        },
+        "headers": {
+            "Access-Control-Allow-Headers": "Content-Type, Authorization, X-CSRFToken, X-Requested-With, Accept",
+            "Access-Control-Allow-Origin": "*",
+            "Cache-Control": "no-cache",
+            "Content-Language": "fr",
+            "Content-Type": "application\/json",
+            "Date": "Fri, 01 Jul 2016 09:02:19 GMT",
+            "Server": "nginx\/1.8.1",
+            "Vary": "Accept, Accept-Language, Cookie, Accept-Encoding, Host",
+            "X-Release-Version": "20160630T192437",
+            "Content-Length": "1129",
+            "Connection": "keep-alive"
+        },
+        "body": "{\"meta\": {\"cart_shipping_info\": {\"amount_with_vat\": \"0.00\", \"amount_without_vat\": \"0.00\", \"valid\": false}, \"total_count\": 1}, \"objects\": [{\"can_ship\": true, \"cart_items\": [{\"id\": 56505, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/cart_item\/56505\/\"}], \"merchant\": {\"id\": 3854, \"pk\": 3854, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/merchant\/3854\/\"}, \"message\": \"error reason\", \"shipping_choices\": [{\"amount_with_vat\": \"12.00\", \"amount_without_vat\": \"10.00\", \"collection_date\": null, \"collection_within_hours\": 2, \"currency\": \"EUR\", \"delivery_date\": null, \"delivery_within_hours\": 72, \"id\": 18, \"method\": \"banded_prices\", \"name\": \"Chronopost\", \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/cart_shipping_choice\/18\/\", \"status\": \"initial\"}, {\"amount_with_vat\": \"24.00\", \"amount_without_vat\": \"20.00\", \"collection_date\": null, \"collection_within_hours\": 2, \"currency\": \"EUR\", \"delivery_date\": null, \"delivery_within_hours\": 48, \"id\": 19, \"method\": \"banded_prices\", \"name\": \"UPS\", \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/cart_shipping_choice\/19\/\", \"status\": \"initial\"}]}]}"
+    }
+},{
+    "request": {
+        "method": "POST",
+        "url": "https:\/\/api.sandbox.iceberg.technology\/v1\/cart\/35799\/shipping_options\/update\/",
+        "headers": {
+            "Host": "api.sandbox.iceberg.technology",
+            "Content-Type": "application\/json",
+            "Content-Language": "fr",
+            "Authorization": "IcebergAccessToken sebastien_fieloux:9f89c1230c03f89c8e07ec2d702e841bdd3a30a7",
+            "Application-Signature": "4204885803bfa9f2e96c58ed477573f1a5ab3424",
+            "Application-Nonce": "1439912482"
+        }
+    },
+    "response": {
+        "status": {
+            "http_version": "1.1",
+            "code": "200",
+            "message": "OK"
+        },
+        "headers": {
+            "Access-Control-Allow-Headers": "Content-Type, Authorization, X-CSRFToken, X-Requested-With, Accept",
+            "Access-Control-Allow-Origin": "*",
+            "Content-Language": "fr",
+            "Content-Type": "application\/json",
+            "Date": "Fri, 01 Jul 2016 09:02:21 GMT",
+            "Server": "nginx\/1.8.1",
+            "Vary": "Accept, Accept-Language, Cookie, Accept-Encoding, Host",
+            "X-Release-Version": "20160630T192437",
+            "Content-Length": "1129",
+            "Connection": "keep-alive"
+        },
+        "body": "{\"meta\": {\"cart_shipping_info\": {\"amount_with_vat\": \"0.00\", \"amount_without_vat\": \"0.00\", \"valid\": false}, \"total_count\": 1}, \"objects\": [{\"can_ship\": true, \"cart_items\": [{\"id\": 56505, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/cart_item\/56505\/\"}], \"merchant\": {\"id\": 3854, \"pk\": 3854, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/merchant\/3854\/\"}, \"message\": \"error reason\", \"shipping_choices\": [{\"amount_with_vat\": \"12.00\", \"amount_without_vat\": \"10.00\", \"collection_date\": null, \"collection_within_hours\": 2, \"currency\": \"EUR\", \"delivery_date\": null, \"delivery_within_hours\": 72, \"id\": 20, \"method\": \"banded_prices\", \"name\": \"Chronopost\", \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/cart_shipping_choice\/20\/\", \"status\": \"initial\"}, {\"amount_with_vat\": \"24.00\", \"amount_without_vat\": \"20.00\", \"collection_date\": null, \"collection_within_hours\": 2, \"currency\": \"EUR\", \"delivery_date\": null, \"delivery_within_hours\": 48, \"id\": 21, \"method\": \"banded_prices\", \"name\": \"UPS\", \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/cart_shipping_choice\/21\/\", \"status\": \"initial\"}]}]}"
+    }
+}]

@@ -1,0 +1,36 @@
+[{
+    "request": {
+        "method": "GET",
+        "url": "https:\/\/api.sandbox.iceberg.technology\/v1\/shipping_provider\/",
+        "headers": {
+            "Host": "api.sandbox.iceberg.technology",
+            "Content-Type": "application\/json; charset=UTF-8",
+            "Accept": "application\/json",
+            "Content-Language": "fr",
+            "Authorization": "IcebergAccessToken sebastien_fieloux:9f89c1230c03f89c8e07ec2d702e841bdd3a30a7",
+            "Application-Signature": "4204885803bfa9f2e96c58ed477573f1a5ab3424",
+            "Application-Nonce": "1439912482"
+        }
+    },
+    "response": {
+        "status": {
+            "http_version": "1.1",
+            "code": "200",
+            "message": "OK"
+        },
+        "headers": {
+            "Access-Control-Allow-Headers": "Content-Type, Authorization, X-CSRFToken, X-Requested-With, Accept",
+            "Access-Control-Allow-Origin": "*",
+            "Cache-Control": "no-cache",
+            "Content-Language": "fr",
+            "Content-Type": "application\/json",
+            "Date": "Thu, 30 Jun 2016 09:25:04 GMT",
+            "Server": "nginx\/1.8.1",
+            "Vary": "Accept, Accept-Language, Cookie, Accept-Encoding, Host",
+            "X-Release-Version": "20160629T160124",
+            "Content-Length": "2361",
+            "Connection": "keep-alive"
+        },
+        "body": "{\"meta\": {\"limit\": 20, \"next\": null, \"offset\": 0, \"previous\": null, \"total_count\": 4}, \"objects\": [{\"application\": {\"id\": 36, \"pk\": 36, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/application\/36\/\"}, \"created_on\": \"2016-05-16T11:36:55+02:00\", \"id\": 27, \"integrator\": false, \"last_modified\": \"2016-05-16T11:54:03+02:00\", \"merchant\": null, \"method\": \"envoimoinscher\", \"name\": \"Test EMC\", \"options\": {\"key\": \"nidusfr2\", \"login\": \"envoimoinscher@nidus.fr\", \"password\": \"arZtx8h90693\"}, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/shipping_provider\/27\/\", \"zone\": {\"id\": 5, \"pk\": 5, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/zone\/5\/\"}}, {\"application\": {\"id\": 36, \"pk\": 36, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/application\/36\/\"}, \"created_on\": \"2016-05-16T11:38:57+02:00\", \"id\": 28, \"integrator\": false, \"last_modified\": \"2016-05-16T11:38:57+02:00\", \"merchant\": null, \"method\": \"banded_prices\", \"name\": \"Test bandes prix\", \"options\": {\"expect_within\": \"3 j ouvr\u00e9s\", \"infinite\": 2, \"limits\": [{\"limit\": 10, \"value\": 9}, {\"limit\": 50, \"value\": 4}]}, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/shipping_provider\/28\/\", \"zone\": {\"id\": 5, \"pk\": 5, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/zone\/5\/\"}}, {\"application\": {\"id\": 690, \"pk\": 690, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/application\/690\/\"}, \"created_on\": \"2016-05-16T15:32:46+02:00\", \"id\": 29, \"integrator\": false, \"last_modified\": \"2016-05-16T15:34:27+02:00\", \"merchant\": null, \"method\": \"per_item\", \"name\": \"Test67\", \"options\": {\"expect_within\": \"5\"}, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/shipping_provider\/29\/\", \"zone\": {\"id\": 5, \"pk\": 5, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/zone\/5\/\"}}, {\"application\": {\"id\": 690, \"pk\": 690, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/application\/690\/\"}, \"created_on\": \"2016-06-01T16:49:13+02:00\", \"id\": 30, \"integrator\": false, \"last_modified\": \"2016-06-01T16:49:13+02:00\", \"merchant\": null, \"method\": \"banded_weight\", \"name\": \"Bande de Poids\", \"options\": {\"expect_within\": \"ee\", \"name\": \"ee\", \"ship_by\": \"ee\"}, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/shipping_provider\/30\/\", \"zone\": {\"id\": 5, \"pk\": 5, \"resource_uri\": \"https:\/\/api.sandbox.iceberg.technology\/v1\/zone\/5\/\"}}]}"
+    }
+}]
