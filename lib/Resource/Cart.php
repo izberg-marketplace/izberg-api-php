@@ -109,7 +109,8 @@ class Cart extends Resource
         return parent::$Izberg->Call($this->getName()."/items/", "POST", $params);
     }
 
-    /**
+    
+	/**
  	  * Remove an item from cart
  	  * @param $id
  	  * @param string $accept_type
