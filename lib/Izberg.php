@@ -21,7 +21,7 @@ class Izberg
 	/**
 	* Use logger
 	*/
-	const LOGS = true;
+	const LOGS = false;
 
 	/**
 	* The API production URL
