@@ -7,9 +7,9 @@
             "Content-Type": "application\/json; charset=UTF-8",
             "Accept": "application\/json",
             "Content-Language": "fr",
-            "Authorization": "IcebergAccessToken sebfie:156d219e38f84953c159a857738119bc0c35de96",
-            "Application-Signature": "1ee82c0e7b43503824fffb6c3be9d2262af62b70",
-            "Application-Nonce": "1439912482"
+            "Authorization": "Bearer XX:XX",
+            "Application-Signature": "XX",
+            "Application-Nonce": "XX"
         }
     },
     "response": {
@@ -41,9 +41,9 @@
             "Host": "api.sandbox.iceberg.technology",
             "Content-Type": "application\/json",
             "Content-Language": "fr",
-            "Authorization": "IcebergAccessToken sebfie:156d219e38f84953c159a857738119bc0c35de96",
-            "Application-Signature": "5b696d107ca69e510ef21595e02bdbfe30da13f3",
-            "Application-Nonce": "1439912482"
+            "Authorization": "Bearer XX:XX",
+            "Application-Signature": "XX",
+            "Application-Nonce": "XX"
         },
         "body": "{\"address\":\"Address line 1\",\"address2\":\"Address line 2\",\"city\":\"St remy de provence\",\"company\":\"Sebfie\",\"first_name\":\"sebastien\",\"from_list\":true,\"id\":23133,\"last_name\":\"fieloux\",\"name\":\"random description 12345\",\"phone\":\"0698674532\",\"resource_uri\":\"https:\\\/\\\/api.sandbox.iceberg.technology\\\/v1\\\/address\\\/23133\\\/\",\"status\":\"10\",\"status_localized\":\"Adresse active \",\"zipcode\":\"13210\"}"
     },
@@ -76,9 +76,9 @@
             "Content-Type": "application\/json; charset=UTF-8",
             "Accept": "application\/json",
             "Content-Language": "fr",
-            "Authorization": "IcebergAccessToken sebfie:156d219e38f84953c159a857738119bc0c35de96",
-            "Application-Signature": "1ee82c0e7b43503824fffb6c3be9d2262af62b70",
-            "Application-Nonce": "1439912482"
+            "Authorization": "Bearer XX:XX",
+            "Application-Signature": "XX",
+            "Application-Nonce": "XX"
         }
     },
     "response": {

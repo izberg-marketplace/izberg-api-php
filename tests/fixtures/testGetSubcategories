@@ -7,9 +7,9 @@
             "Content-Type": "application\/json; charset=UTF-8",
             "Accept": "application\/json",
             "Content-Language": "fr",
-            "Authorization": "IcebergAccessToken sebfie:156d219e38f84953c159a857738119bc0c35de96",
-            "Application-Signature": "2a9ac83e68fba8fef59ffd658e5cd9a1145078d2",
-            "Application-Nonce": "1439912482"
+            "Authorization": "Bearer XX:XX",
+            "Application-Signature": "XX",
+            "Application-Nonce": "XX"
         }
     },
     "response": {

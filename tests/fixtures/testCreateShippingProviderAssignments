@@ -6,9 +6,9 @@
             "Host": "api.sandbox.iceberg.technology",
             "Content-Type": "application\/json",
             "Content-Language": "fr",
-            "Authorization": "IcebergAccessToken sebastien_fieloux:9f89c1230c03f89c8e07ec2d702e841bdd3a30a7",
-            "Application-Signature": "6005f13b810805e12eb04c4388370eb07a8615eb",
-            "Application-Nonce": "1439912482"
+            "Authorization": "Bearer XX:XX",
+            "Application-Signature": "XX",
+            "Application-Nonce": "XX"
         },
         "body": "{\"merchant\":\"\\\/v1\\\/merchant\\\/1168\\\/\",\"provider\":\"\\\/v1\\\/shipping_provider\\\/27\\\/\",\"options\":[]}"
     },

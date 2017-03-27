@@ -7,9 +7,9 @@
             "Content-Type": "application\/json; charset=UTF-8",
             "Accept": "application\/json",
             "Content-Language": "fr",
-            "Authorization": "IcebergAccessToken sebfie:156d219e38f84953c159a857738119bc0c35de96",
-            "Application-Signature": "1ee82c0e7b43503824fffb6c3be9d2262af62b70",
-            "Application-Nonce": "1439912482"
+            "Authorization": "Bearer XX:XX",
+            "Application-Signature": "XX",
+            "Application-Nonce": "XX"
         }
     },
     "response": {
@@ -42,9 +42,9 @@
             "Content-Type": "application\/json; charset=UTF-8",
             "Accept": "application\/json",
             "Content-Language": "fr",
-            "Authorization": "IcebergAccessToken sebfie:156d219e38f84953c159a857738119bc0c35de96",
-            "Application-Signature": "1ee82c0e7b43503824fffb6c3be9d2262af62b70",
-            "Application-Nonce": "1439912482"
+            "Authorization": "Bearer XX:XX",
+            "Application-Signature": "XX",
+            "Application-Nonce": "XX"
         }
     },
     "response": {
@@ -77,9 +77,9 @@
             "Content-Type": "application\/json; charset=UTF-8",
             "Accept": "application\/xml",
             "Content-Language": "fr",
-            "Authorization": "IcebergAccessToken sebfie:156d219e38f84953c159a857738119bc0c35de96",
-            "Application-Signature": "1ee82c0e7b43503824fffb6c3be9d2262af62b70",
-            "Application-Nonce": "1439912482"
+            "Authorization": "Bearer XX:XX",
+            "Application-Signature": "XX",
+            "Application-Nonce": "XX"
         }
     },
     "response": {
@@ -110,9 +110,9 @@
             "Content-Type": "application\/json; charset=UTF-8",
             "Accept": "application\/json",
             "Content-Language": "fr",
-            "Authorization": "IcebergAccessToken sebfie:156d219e38f84953c159a857738119bc0c35de96",
-            "Application-Signature": "1ee82c0e7b43503824fffb6c3be9d2262af62b70",
-            "Application-Nonce": "1439912482"
+            "Authorization": "Bearer XX:XX",
+            "Application-Signature": "XX",
+            "Application-Nonce": "XX"
         }
     },
     "response": {
@@ -144,9 +144,9 @@
             "Host": "api.sandbox.iceberg.technology",
             "Content-Type": "application\/json",
             "Content-Language": "fr",
-            "Authorization": "IcebergAccessToken sebfie:156d219e38f84953c159a857738119bc0c35de96",
-            "Application-Signature": "cee0533c0fbdb031512a037729db164cd319502b",
-            "Application-Nonce": "1439912482"
+            "Authorization": "Bearer XX:XX",
+            "Application-Signature": "XXb",
+            "Application-Nonce": "XX"
         },
         "body": "{\"offer_id\":\"38887\",\"variation_id\":\"118529\",\"quantity\":1}"
     },
@@ -179,9 +179,9 @@
             "Content-Type": "application\/json; charset=UTF-8",
             "Accept": "application\/json",
             "Content-Language": "fr",
-            "Authorization": "IcebergAccessToken sebfie:156d219e38f84953c159a857738119bc0c35de96",
-            "Application-Signature": "d143061cdd31403167755467631edea7a3dd2155",
-            "Application-Nonce": "1439912482"
+            "Authorization": "Bearer XX:XX",
+            "Application-Signature": "XX",
+            "Application-Nonce": "XX"
         }
     },
     "response": {
@@ -213,9 +213,9 @@
             "Host": "api.sandbox.iceberg.technology",
             "Content-Type": "application\/json",
             "Content-Language": "fr",
-            "Authorization": "IcebergAccessToken sebfie:156d219e38f84953c159a857738119bc0c35de96",
-            "Application-Signature": "58e610e913c62993a783e052ef42bf22ebad5903",
-            "Application-Nonce": "1439912482"
+            "Authorization": "Bearer XX:XX",
+            "Application-Signature": "XX",
+            "Application-Nonce": "XX"
         },
         "body": "{\"address\":\"Address line 1\",\"address2\":\"Address line 2\",\"city\":\"St remy de provence\",\"company\":\"Sebfie\",\"country\":\"\\\/v1\\\/country\\\/72\\\/\",\"digicode\":null,\"first_name\":\"sebastien\",\"floor\":null,\"last_name\":\"fieloux\",\"name\":\"House\",\"phone\":\"0698674532\",\"state\":null,\"status\":10,\"zipcode\":\"13210\"}"
     },
@@ -248,9 +248,9 @@
             "Host": "api.sandbox.iceberg.technology",
             "Content-Type": "application\/json",
             "Content-Language": "fr",
-            "Authorization": "IcebergAccessToken sebfie:156d219e38f84953c159a857738119bc0c35de96",
-            "Application-Signature": "8baf8996d2a28c6e3c6b3c177928a7e0b011fd5a",
-            "Application-Nonce": "1439912482"
+            "Authorization": "Bearer XX:XX",
+            "Application-Signature": "XX",
+            "Application-Nonce": "XX"
         },
         "body": "{\"billing_address\":\"\\\/v1\\\/address\\\/23136\\\/\"}"
     },
@@ -282,9 +282,9 @@
             "Host": "api.sandbox.iceberg.technology",
             "Content-Type": "application\/json",
             "Content-Language": "fr",
-            "Authorization": "IcebergAccessToken sebfie:156d219e38f84953c159a857738119bc0c35de96",
-            "Application-Signature": "3a6b1852fe1840fea94fd6aa6aba01e54fc0e9c6",
-            "Application-Nonce": "1439912482"
+            "Authorization": "Bearer XX:XX",
+            "Application-Signature": "XX",
+            "Application-Nonce": "XX"
         },
         "body": "{\"shipping_address\":\"\\\/v1\\\/address\\\/23136\\\/\"}"
     },
@@ -316,9 +316,9 @@
             "Host": "api.sandbox.iceberg.technology",
             "Content-Type": "application\/json",
             "Content-Language": "fr",
-            "Authorization": "IcebergAccessToken sebfie:156d219e38f84953c159a857738119bc0c35de96",
-            "Application-Signature": "1ee82c0e7b43503824fffb6c3be9d2262af62b70",
-            "Application-Nonce": "1439912482"
+            "Authorization": "Bearer XX:XX",
+            "Application-Signature": "XX",
+            "Application-Nonce": "XX"
         }
     },
     "response": {
@@ -349,9 +349,9 @@
             "Host": "api.sandbox.iceberg.technology",
             "Content-Type": "application\/json",
             "Content-Language": "fr",
-            "Authorization": "IcebergAccessToken sebfie:156d219e38f84953c159a857738119bc0c35de96",
-            "Application-Signature": "e5e28c08fe20c5f923189bb925848a7bc91c1c16",
-            "Application-Nonce": "1439912482"
+            "Authorization": "Bearer XX:XX",
+            "Application-Signature": "XX",
+            "Application-Nonce": "XX"
         },
         "body": "[]"
     },
