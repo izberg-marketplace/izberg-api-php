@@ -6,9 +6,9 @@
             "Host": "api.sandbox.iceberg.technology",
             "Content-Type": "application\/json",
             "Content-Language": "fr",
-            "Authorization": "IcebergAccessToken sebastien_fieloux:9f89c1230c03f89c8e07ec2d702e841bdd3a30a7",
-            "Application-Signature": "9929a128d21371d52f12d23ea00af61133870170",
-            "Application-Nonce": "1439912482"
+            "Authorization": "Bearer XX",
+            "Application-Signature": "XX",
+            "Application-Nonce": "XX"
         },
         "body": "{\"integrator\":false,\"method\":\"sebfie\",\"application\":\"\\\/v1\\\/application\\\/36\\\/\",\"zone\":\"\\\/v1\\\/zone\\\/5\\\/\"}"
     },
