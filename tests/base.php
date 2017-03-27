@@ -45,7 +45,7 @@ abstract class BaseTester extends PHPUnit_Framework_TestCase
 
 		$mock->expects($this->any())
 	    ->method('getNonce')
-	    ->will($this->returnValue(1439912482));
+	    ->will($this->returnValue(XX));
 
 		return $mock;
 	}
