@@ -8,10 +8,10 @@ abstract class BaseTester extends PHPUnit_Framework_TestCase
   public function getShippingIzberg()
   {
     return $this->getIzberg(array(
-        "appNamespace" => "sebastien2",
-        "username" => "sebastien_fieloux",
-        "accessToken" => "9f89c1230c03f89c8e07ec2d702e841bdd3a30a7",
-        "apiSecret" => "3fec10fc-26db-44c2-b366-aeac8e8e526d ",
+        "appNamespace" => "XX",
+        "username" => "XX",
+        "accessToken" => "XX",
+        "apiSecret" => "XXX",
         "sandbox" => true
     ));
   }
@@ -19,7 +19,7 @@ abstract class BaseTester extends PHPUnit_Framework_TestCase
 	{
 		if (empty($options)) {
 			$options = array(
-					"appNamespace" => "lolote",
+					"appNamespace" => "XX",
 					"username" => getenv("USERNAME1"),
 					"accessToken" => getenv("TOKEN1"),
           "apiSecret" => getenv("API_SECRET_KEY"),
@@ -54,8 +54,8 @@ abstract class BaseTester extends PHPUnit_Framework_TestCase
 	{
 		$a->sso(array(
       "email"     => "myemail@yahoo.fr",
-			"apiKey"    => "d43fce48-836c-43d3-9ddb-7da2e70af9f1",
-			"apiSecret" => "6cb0c550-9686-41af-9b5e-5cf2dc2aa3d0",
+			"apiKey"    => "XXX",
+			"apiSecret" => "XXX",
       "firstName" => "my_firstname",
       "lastName"  => "my_lastname"
     ));
