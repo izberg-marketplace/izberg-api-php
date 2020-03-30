@@ -706,7 +706,7 @@ class Izberg
 		$body = ltrim(ltrim($paramString, '&'), '?');
 		if ('POST' === $method)
 		{
-			curl_setopt($ch, CURLOPT_POST, count($params));
+			curl_setopt($ch, CURLOPT_POST, count(is_array($params) ? $params : []));
 			if (ltrim(ltrim($paramString, '&'), '?') != "") {
 				curl_setopt($ch, CURLOPT_POSTFIELDS, $body);
 			}
@@ -714,7 +714,7 @@ class Izberg
 		} else if ('DELETE' === $method) {
 			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'DELETE');
 		} else if ('PUT' === $method) {
-			curl_setopt($ch, CURLOPT_POST, count($params));
+			curl_setopt($ch, CURLOPT_POST, count(is_array($params) ? $params : []));
 			curl_setopt($ch, CURLOPT_POSTFIELDS, $body);
 			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'PUT');
 		}
